@@ -1,1 +1,1 @@
-# connected_camera
+This is a connected camera project.
