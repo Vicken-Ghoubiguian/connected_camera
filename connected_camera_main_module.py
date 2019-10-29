@@ -70,7 +70,7 @@ def saving_video_of_exploits_function(title):
 
 	current_mode = None
 
-	output_video_file = initialisation_of_videoWriter_function('outputVideo')
+	output_video_file = initialisation_of_videoWriter_function(title)
 
 	while True:
 
@@ -110,4 +110,4 @@ def saving_video_of_exploits_function(title):
 
 if __name__ == '__main__':
 
-	saving_video_of_exploits_function('output')
+	saving_video_of_exploits_function('outputVideo')
