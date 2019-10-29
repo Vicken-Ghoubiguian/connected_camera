@@ -6,6 +6,7 @@ def print_howto():
 		Change cartoonizing mode:
 		1. Cartoonize without color - press 's'
 		2. Cartoonize with color - press 'c'
+		3. Shoot a photo regardless of the mode - press '1'
 	""")
 
 def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
