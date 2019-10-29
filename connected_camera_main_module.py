@@ -48,6 +48,20 @@ def shoot_a_photo_function(title, desired_frame):
 
 	cv2.imwrite(title + '.jpg', desired_frame, [cv2.IMWRITE_JPEG_QUALITY, 90])
 
+def initialisation_of_videoWriter_function(desired_title):
+
+	fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+
+	return cv2.VideoWriter(desired_title + '.mp4', fourcc, 20.0, (640,480))
+
+def writing_frame_function(desired_videoWriter, desired_frame):
+
+	desired_videoWriter.write(desired_frame)
+
+def releasing_videoWriter_function(desired_videoWriter):
+
+	desired_videoWriter.release()
+
 def saving_video_of_exploits_function(title):
 
 	print_howto()
@@ -56,9 +70,7 @@ def saving_video_of_exploits_function(title):
 
 	current_mode = None
 
-	fourcc = cv2.VideoWriter_fourcc(*'MP4V')
-
-	output_video_file = cv2.VideoWriter(title + '.mp4',fourcc, 20.0, (640,480))
+	output_video_file = initialisation_of_videoWriter_function('outputVideo')
 
 	while True:
 
@@ -86,13 +98,13 @@ def saving_video_of_exploits_function(title):
 
 			shoot_a_photo_function('monImg',frame)
 
-		output_video_file.write(frame)
+		writing_frame_function(output_video_file, frame)
 
 		cv2.imshow('Cartoonization', frame)
 
 	cap.release()
 
-	output_video_file.release()
+	releasing_videoWriter_function(output_video_file)
 
 	cv2.destroyAllWindows()
 
