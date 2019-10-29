@@ -3,10 +3,13 @@ import numpy as np
 
 def print_howto():
 	print("""
-		Change cartoonizing mode:
-		1. Cartoonize without color - press 's'
-		2. Cartoonize with color - press 'c'
-		3. Shoot a photo regardless of the mode - press '1'
+		Change mode:
+		* Normal mode - press any keyboard key
+		* Draw mode - press 's'
+		* Painting mode - press 'c'
+
+		multimedia features:
+		* Shoot a photo regardless of the mode - press '1'
 	""")
 
 def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
