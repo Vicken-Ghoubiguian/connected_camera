@@ -62,7 +62,7 @@ def releasing_videoWriter_function(desired_videoWriter):
 
 	desired_videoWriter.release()
 
-def saving_video_of_exploits_function(title):
+def exploits_function(title):
 
 	print_howto()
 
@@ -110,4 +110,4 @@ def saving_video_of_exploits_function(title):
 
 if __name__ == '__main__':
 
-	saving_video_of_exploits_function('outputVideo')
+	exploits_function('outputVideo')
