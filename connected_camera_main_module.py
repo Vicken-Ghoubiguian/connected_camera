@@ -74,6 +74,8 @@ def exploits_function(title):
 
 	current_mode = None
 
+	is_shoting_video = False
+
 	output_video_file = initialisation_of_videoWriter_function(title)
 
 	while True:
@@ -101,6 +103,20 @@ def exploits_function(title):
 		if c == ord('1'):
 
 			shoot_a_photo_function('monImg',frame)
+
+		elif c == ord('2'):
+
+			if is_shoting_video == False:
+
+				is_shoting_video = True
+
+				print('Beginning of video shooting...')
+
+			else:
+
+				is_shoting_video = False
+
+				print('End of video shooting...')
 
 		writing_frame_function(output_video_file, frame)
 
