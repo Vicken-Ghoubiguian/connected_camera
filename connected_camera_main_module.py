@@ -1,4 +1,5 @@
 import cv2
+import time
 import numpy as np
 
 def print_howto():
@@ -76,6 +77,10 @@ def exploits_function(title):
 
 	is_shoting_video = False
 
+	starting_stopwatch_time = 0
+
+	stoping_stopwatch_time = 0
+
 	output_video_file = initialisation_of_videoWriter_function(title)
 
 	while True:
@@ -110,13 +115,18 @@ def exploits_function(title):
 
 				is_shoting_video = True
 
-				print('Beginning of video shooting...')
+				starting_stopwatch_time = int(time.time())
 
+				stoping_stopwatch_time = int(time.time())
+
+				print('Beginning of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
 			else:
 
 				is_shoting_video = False
 
-				print('End of video shooting...')
+				stoping_stopwatch_time = int(time.time())
+
+				print('End of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
 
 		writing_frame_function(output_video_file, frame)
 
