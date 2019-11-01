@@ -67,9 +67,27 @@ def releasing_videoWriter_function(desired_videoWriter):
 
 	desired_videoWriter.release()
 
+def facial_detection_application_function(desired_frame, face_cascade, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
+
+	returned_frame = cv2.resize(desired_frame, None, fx = scale_factor, fy = scale_factor, interpolation = cv2.INTER_AREA)
+
+	face_detection_rectangle = face_cascade.detectMultiScale(returned_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+
+	for (x, y, w, h) in face_detection_rectangle:
+
+		cv2.rectangle(returned_frame, (x,y), (x+w,y+h), (0,255,0), 3)
+
+	return returned_frame
+
 def exploits_function(title):
 
 	print_howto()
+
+	face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+
+	if face_cascade.empty():
+
+		raise IOError('Unable to load the face cascade classifier xml file')
 
 	cap = cv2.VideoCapture(0)
 
@@ -107,7 +125,7 @@ def exploits_function(title):
 
 		if c == ord('1'):
 
-			shoot_a_photo_function('monImg',frame)
+			shoot_a_photo_function('monImg', facial_detection_application_function(frame, face_cascade))
 
 		elif c == ord('2'):
 
@@ -129,6 +147,8 @@ def exploits_function(title):
 				print('End of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
 
 		writing_frame_function(output_video_file, frame)
+
+		frame = facial_detection_application_function(frame, face_cascade)
 
 		cv2.imshow('Cartoonization', frame)
 
