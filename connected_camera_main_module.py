@@ -11,6 +11,7 @@ def print_howto():
 
 		multimedia features:
 		* Shoot a photo regardless of the mode - press '1'
+		* Start/Stop shooting video - press '2'
 	""")
 
 def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
@@ -83,7 +84,7 @@ def exploits_function(title):
 
 	print_howto()
 
-	face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
 
 	if face_cascade.empty():
 
