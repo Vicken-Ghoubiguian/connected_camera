@@ -70,7 +70,7 @@ def releasing_videoWriter_function(desired_videoWriter):
 
 def frontal_facial_detection_application_function(desired_frame, face_cascade, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
 
-	returned_frame = cv2.resize(desired_frame, None, fx = scale_factor, fy = scale_factor, interpolation = cv2.INTER_AREA)
+	returned_frame = desired_frame
 
 	face_detection_rectangle = face_cascade.detectMultiScale(returned_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
 
@@ -80,15 +80,33 @@ def frontal_facial_detection_application_function(desired_frame, face_cascade, s
 
 	return returned_frame
 
+def eye_detection_application_function(desired_frame, eye_cascade, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
+
+	returned_frame = desired_frame
+
+	eye_detection_circle = eye_cascade.detectMultiScale(returned_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+
+	for (x, y, w, h) in eye_detection_circle:
+
+		cv2.circle(returned_frame, (x,y), int(0.3 * (w + h)), (255, 0, 0), 3)
+
+	return returned_frame
+
 def exploits_function(title):
 
 	print_howto()
 
 	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
 
+	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')
+
 	if face_cascade.empty():
 
 		raise IOError('Unable to load the face cascade classifier xml file')
+
+	if eye_cascade.empty():
+
+		raise IOError('Unable to load the eye cascade classifier xml file')
 
 	cap = cv2.VideoCapture(0)
 
@@ -150,6 +168,8 @@ def exploits_function(title):
 		writing_frame_function(output_video_file, frame)
 
 		frame = frontal_facial_detection_application_function(frame, face_cascade)
+
+		frame = eye_detection_application_function(frame, eye_cascade)
 
 		cv2.imshow('Cartoonization', frame)
 
