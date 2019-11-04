@@ -68,7 +68,7 @@ def releasing_videoWriter_function(desired_videoWriter):
 
 	desired_videoWriter.release()
 
-def facial_detection_application_function(desired_frame, face_cascade, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
+def frontal_facial_detection_application_function(desired_frame, face_cascade, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
 
 	returned_frame = cv2.resize(desired_frame, None, fx = scale_factor, fy = scale_factor, interpolation = cv2.INTER_AREA)
 
@@ -149,7 +149,7 @@ def exploits_function(title):
 
 		writing_frame_function(output_video_file, frame)
 
-		frame = facial_detection_application_function(frame, face_cascade)
+		frame = frontal_facial_detection_application_function(frame, face_cascade)
 
 		cv2.imshow('Cartoonization', frame)
 
