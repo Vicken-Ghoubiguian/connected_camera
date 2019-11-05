@@ -146,7 +146,7 @@ def exploits_function(title):
 
 		if c == ord('1'):
 
-			shoot_a_photo_function('monImg', facial_detection_application_function(frame, face_cascade))
+			shoot_a_photo_function('output_media_files/monImg', frontal_facial_detection_application_function(frame))
 
 		elif c == ord('2'):
 
