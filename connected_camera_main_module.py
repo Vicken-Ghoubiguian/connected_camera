@@ -8,6 +8,8 @@ def print_howto():
 		* Normal mode - press any keyboard key
 		* Draw mode - press 's'
 		* Painting mode - press 'c'
+		* Activating face detection - press 'f'
+		* Activating eye detection - press 'e'
 
 		multimedia features:
 		* Shoot a photo regardless of the mode - press '1'
@@ -114,6 +116,10 @@ def exploits_function(title):
 
 	is_shoting_video = False
 
+	is_activated_face_detection = False
+
+	is_activated_eye_detection = False
+
 	starting_stopwatch_time = 0
 
 	stoping_stopwatch_time = 0
@@ -165,11 +171,35 @@ def exploits_function(title):
 
 				print('End of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
 
+		elif c == ord('f'):
+
+			if is_activated_face_detection == True:
+
+				is_activated_face_detection = False
+
+			else:
+
+				is_activated_face_detection = True
+
+		elif c == ord('e'):
+
+			if is_activated_eye_detection == True:
+
+				is_activated_eye_detection = False
+
+			else:
+
+				is_activated_eye_detection = True
+
 		writing_frame_function(output_video_file, frame)
 
-		frame = frontal_facial_detection_application_function(frame, face_cascade)
+		if is_activated_face_detection == True:
 
-		frame = eye_detection_application_function(frame, eye_cascade)
+			frame = frontal_facial_detection_application_function(frame, face_cascade)
+
+		if is_activated_eye_detection == True:
+
+			frame = eye_detection_application_function(frame, eye_cascade)
 
 		cv2.imshow('Cartoonization', frame)
 
