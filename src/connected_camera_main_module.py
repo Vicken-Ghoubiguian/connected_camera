@@ -208,7 +208,3 @@ def exploits_function(title):
 	releasing_videoWriter_function(output_video_file)
 
 	cv2.destroyAllWindows()
-
-if __name__ == '__main__':
-
-	exploits_function('outputVideo')
