@@ -80,9 +80,9 @@ def frontal_facial_detection_application_function(desired_frame, scale_factor = 
 
 	face = face_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
 
-	for (x, y, w, h) in face:
+	for (face_x, face_y, face_w, face_h) in face:
 
-		cv2.rectangle(desired_frame, (x,y), (x+w,y+h), (0,255,0), 3)
+		cv2.rectangle(desired_frame, (face_x, face_y), (face_x + face_w, face_y + face_h), (0,255,0), 3)
 
 	return desired_frame
 
@@ -100,17 +100,17 @@ def eye_detection_application_function(desired_frame):
 
 		raise IOError('Unable to load the eye cascade classifier xml file')
 
-	faces = face_cascade.detectMultiScale(desired_frame, 1.3, 5)
+	face = face_cascade.detectMultiScale(desired_frame, 1.3, 5)
 
-	for (x,y,w,h) in faces:
+	for (face_x, face_y, face_w, face_h) in face:
 
-		roi_color = desired_frame[y:y+h, x:x+w]
+		roi_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
 
 		eyes = eye_cascade.detectMultiScale(roi_color)
 
-		for (ex,ey,ew,eh) in eyes:
+		for (eyes_x, eyes_y, eyes_w, eyes_h) in eyes:
 
-			cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(250,0,0),2)
+			cv2.rectangle(roi_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (250,0,0), 2)
 
 	return desired_frame
 
