@@ -1,6 +1,8 @@
 import cv2
 import time
 import numpy as np
+import src.terminal_color_codes as terminal_color_codes
+from datetime import datetime
 
 def print_howto():
 	print("""
@@ -140,6 +142,10 @@ def exploits_function(title):
 
 		c = cv2.waitKey(1)
 
+		today = datetime.today()
+
+		today_as_string = today.strftime("%B %d, %Y at %I:%M%p")
+
 		if c == 27:
 
 			break
@@ -185,9 +191,13 @@ def exploits_function(title):
 
 				is_activated_face_detection = False
 
+				print(terminal_color_codes.terminal_color_codes.LightYellow + "[" + today_as_string + "]: Disable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			else:
 
 				is_activated_face_detection = True
+
+				print("[" + today_as_string + "]: Enable facial detection")
 
 		elif c == ord('e'):
 
@@ -195,9 +205,13 @@ def exploits_function(title):
 
 				is_activated_eye_detection = False
 
+				print("[" + today_as_string + "]: Disable eyes detection")
+
 			else:
 
 				is_activated_eye_detection = True
+
+				print("[" + today_as_string + "]: Enable eyes detection")
 
 		writing_frame_function(output_video_file, frame)
 
