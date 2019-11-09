@@ -78,27 +78,39 @@ def frontal_facial_detection_application_function(desired_frame, scale_factor = 
 
 		raise IOError('Unable to load the face cascade classifier xml file')
 
-	face_detection_rectangle = face_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+	face = face_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
 
-	for (x, y, w, h) in face_detection_rectangle:
+	for (x, y, w, h) in face:
 
 		cv2.rectangle(desired_frame, (x,y), (x+w,y+h), (0,255,0), 3)
 
 	return desired_frame
 
-def eye_detection_application_function(desired_frame, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
+def eye_detection_application_function(desired_frame):
 
 	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')
+
+	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
+
+	if face_cascade.empty():
+
+                raise IOError('Unable to load the face cascade classifier xml file')
 
 	if eye_cascade.empty():
 
 		raise IOError('Unable to load the eye cascade classifier xml file')
 
-	eye_detection_circle = eye_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+	faces = face_cascade.detectMultiScale(desired_frame, 1.3, 5)
 
-	for (x, y, w, h) in eye_detection_circle:
+	for (x,y,w,h) in faces:
 
-		cv2.circle(desired_frame, (x,y), int(0.3 * (w + h)), (255, 0, 0), 3)
+		roi_color = desired_frame[y:y+h, x:x+w]
+
+		eyes = eye_cascade.detectMultiScale(roi_color)
+
+		for (ex,ey,ew,eh) in eyes:
+
+			cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(250,0,0),2)
 
 	return desired_frame
 
