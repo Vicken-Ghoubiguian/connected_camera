@@ -5,7 +5,7 @@ import src.terminal_color_codes as terminal_color_codes
 from datetime import datetime
 
 def print_howto():
-	print("""
+	print(terminal_color_codes.terminal_color_codes.Yellow + """
 		Change mode:
 		* Normal mode - press any keyboard key
 		* Draw mode - press 's'
@@ -16,7 +16,7 @@ def print_howto():
 		multimedia features:
 		* Shoot a photo regardless of the mode - press '1'
 		* Start/Stop shooting video - press '2'
-	""")
+	""" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
 
@@ -191,13 +191,13 @@ def exploits_function(title):
 
 				is_activated_face_detection = False
 
-				print(terminal_color_codes.terminal_color_codes.LightYellow + "[" + today_as_string + "]: Disable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+				print(terminal_color_codes.terminal_color_codes.Green + "[" + today_as_string + "]: Disable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 
 				is_activated_face_detection = True
 
-				print("[" + today_as_string + "]: Enable facial detection")
+				print(terminal_color_codes.terminal_color_codes.Green + "[" + today_as_string + "]: Enable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('e'):
 
@@ -205,13 +205,13 @@ def exploits_function(title):
 
 				is_activated_eye_detection = False
 
-				print("[" + today_as_string + "]: Disable eyes detection")
+				print(terminal_color_codes.terminal_color_codes.Blue + "[" + today_as_string + "]: Disable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 
 				is_activated_eye_detection = True
 
-				print("[" + today_as_string + "]: Enable eyes detection")
+				print(terminal_color_codes.terminal_color_codes.Blue + "[" + today_as_string + "]: Enable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		writing_frame_function(output_video_file, frame)
 
