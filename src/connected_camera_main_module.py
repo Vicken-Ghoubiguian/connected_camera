@@ -2,21 +2,9 @@ import cv2
 import time
 import numpy as np
 import src.terminal_color_codes as terminal_color_codes
+import src.detection_module as detection_module
+import src.usefull_functions_module as usefull_functions_module
 from datetime import datetime
-
-def print_howto():
-	print(terminal_color_codes.terminal_color_codes.Yellow + """
-		Change mode:
-		* Normal mode - press any keyboard key
-		* Draw mode - press 's'
-		* Painting mode - press 'c'
-		* Activating face detection - press 'f'
-		* Activating eye detection - press 'e'
-
-		multimedia features:
-		* Shoot a photo regardless of the mode - press '1'
-		* Start/Stop shooting video - press '2'
-	""" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
 
@@ -72,53 +60,9 @@ def releasing_videoWriter_function(desired_videoWriter):
 
 	desired_videoWriter.release()
 
-def frontal_facial_detection_application_function(desired_frame, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
-
-	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
-
-	if face_cascade.empty():
-
-		raise IOError('Unable to load the face cascade classifier xml file')
-
-	face = face_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
-
-	for (face_x, face_y, face_w, face_h) in face:
-
-		cv2.rectangle(desired_frame, (face_x, face_y), (face_x + face_w, face_y + face_h), (0,255,0), 3)
-
-	return desired_frame
-
-def eye_detection_application_function(desired_frame):
-
-	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')
-
-	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
-
-	if face_cascade.empty():
-
-                raise IOError('Unable to load the face cascade classifier xml file')
-
-	if eye_cascade.empty():
-
-		raise IOError('Unable to load the eye cascade classifier xml file')
-
-	face = face_cascade.detectMultiScale(desired_frame, 1.3, 5)
-
-	for (face_x, face_y, face_w, face_h) in face:
-
-		roi_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
-
-		eyes = eye_cascade.detectMultiScale(roi_color)
-
-		for (eyes_x, eyes_y, eyes_w, eyes_h) in eyes:
-
-			cv2.rectangle(roi_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (250,0,0), 2)
-
-	return desired_frame
-
 def exploits_function(title):
 
-	print_howto()
+	usefull_functions_module.print_howto()
 
 	cap = cv2.VideoCapture(0)
 
@@ -164,7 +108,7 @@ def exploits_function(title):
 
 		if c == ord('1'):
 
-			shoot_a_photo_function('output_media_files/monImg', frontal_facial_detection_application_function(frame))
+			shoot_a_photo_function('output_media_files/monImg', detection_module.frontal_facial_detection_application_function(frame))
 
 		elif c == ord('2'):
 
@@ -191,13 +135,13 @@ def exploits_function(title):
 
 				is_activated_face_detection = False
 
-				print(terminal_color_codes.terminal_color_codes.Green + "[" + today_as_string + "]: Disable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Disable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 
 				is_activated_face_detection = True
 
-				print(terminal_color_codes.terminal_color_codes.Green + "[" + today_as_string + "]: Enable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Enable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('e'):
 
@@ -205,23 +149,23 @@ def exploits_function(title):
 
 				is_activated_eye_detection = False
 
-				print(terminal_color_codes.terminal_color_codes.Blue + "[" + today_as_string + "]: Disable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Disable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 
 				is_activated_eye_detection = True
 
-				print(terminal_color_codes.terminal_color_codes.Blue + "[" + today_as_string + "]: Enable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Enable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		writing_frame_function(output_video_file, frame)
 
 		if is_activated_face_detection == True:
 
-			frame = frontal_facial_detection_application_function(frame)
+			frame = detection_module.frontal_facial_detection_application_function(frame)
 
 		if is_activated_eye_detection == True:
 
-			frame = eye_detection_application_function(frame)
+			frame = detection_module.eye_detection_application_function(frame)
 
 		cv2.imshow('Cartoonization', frame)
 
