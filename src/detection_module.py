@@ -21,7 +21,7 @@ def eye_detection_application_function(desired_frame):
 
 	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')
 
-	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
+	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_default.xml')
 
 	if face_cascade.empty():
 
