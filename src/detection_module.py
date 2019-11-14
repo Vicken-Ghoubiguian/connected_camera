@@ -17,6 +17,38 @@ def frontal_facial_detection_application_function(desired_frame, scale_factor = 
 
 	return desired_frame
 
+def smile_detection_application_function(desired_frame):
+
+	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
+
+	smile_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_smile.xml')
+
+	if face_cascade.empty():
+
+                raise IOError('Unable to load the face cascade classifier xml file')
+
+	if smile_cascade.empty():
+
+                raise IOError('Unable to load the smile cascade classifier xml file')
+
+	face = face_cascade.detectMultiScale(desired_frame, scaleFactor=1.05, minNeighbors=5, minSize=(45, 45))
+
+	for (x,y,w,h) in face:
+
+		#cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
+
+		#face_gray = gray[y:y+h, x:x+w]
+
+		face_color = desired_frame[y:y+h, x:x+w]
+
+		smile = smile_cascade.detectMultiScale(face_color, scaleFactor=1.7, minNeighbors=3, minSize=(15, 15))
+
+		for (ex,ey,ew,eh) in smile:
+
+			cv2.rectangle(face_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),1)
+
+	return desired_frame
+
 def eye_detection_application_function(desired_frame):
 
 	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')

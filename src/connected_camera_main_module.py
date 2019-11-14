@@ -74,6 +74,8 @@ def exploits_function(title):
 
 	is_activated_eye_detection = False
 
+	is_activated_smile_detection = False
+
 	starting_stopwatch_time = 0
 
 	stoping_stopwatch_time = 0
@@ -98,7 +100,7 @@ def exploits_function(title):
 
 			current_mode = c
 
-		if current_mode == ord('s'):
+		if current_mode == ord('p'):
 
 			frame = cartoonizing_image_function(frame, ksize = 5, sketch_mode = True)
 
@@ -143,6 +145,16 @@ def exploits_function(title):
 
 				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Enable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+		elif c == ord('s'):
+
+			if is_activated_smile_detection == True:
+
+				is_activated_smile_detection = False
+
+			else:
+
+				is_activated_smile_detection = True
+
 		elif c == ord('e'):
 
 			if is_activated_eye_detection == True:
@@ -158,6 +170,10 @@ def exploits_function(title):
 				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Enable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		writing_frame_function(output_video_file, frame)
+
+		if is_activated_smile_detection == True:
+
+			frame = detection_module.smile_detection_application_function(frame)
 
 		if is_activated_face_detection == True:
 
