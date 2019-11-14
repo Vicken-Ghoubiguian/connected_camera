@@ -4,10 +4,11 @@ def print_howto():
 	print(terminal_color_codes.terminal_color_codes.Yellow + """
 		Change mode:
 		* Normal mode - press any keyboard key
-		* Draw mode - press 's'
+		* Draw mode - press 'p'
 		* Painting mode - press 'c'
 		* Activating face detection - press 'f'
 		* Activating eye detection - press 'e'
+		* Activating smile detection - press 's'
 
 		multimedia features:
 		* Shoot a photo regardless of the mode - press '1'
