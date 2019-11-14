@@ -31,21 +31,17 @@ def smile_detection_application_function(desired_frame):
 
                 raise IOError('Unable to load the smile cascade classifier xml file')
 
-	face = face_cascade.detectMultiScale(desired_frame, scaleFactor=1.05, minNeighbors=5, minSize=(45, 45))
+	face = face_cascade.detectMultiScale(desired_frame, scaleFactor = 1.05, minNeighbors = 1)
 
-	for (x,y,w,h) in face:
+	for (face_x, face_y, face_w, face_h) in face:
 
-		#cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
+		face_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
 
-		#face_gray = gray[y:y+h, x:x+w]
+		smile = smile_cascade.detectMultiScale(face_color, scaleFactor = 1.7, minNeighbors = 1)
 
-		face_color = desired_frame[y:y+h, x:x+w]
+		for (smile_x, smile_y, smile_w, smile_h) in smile:
 
-		smile = smile_cascade.detectMultiScale(face_color, scaleFactor=1.7, minNeighbors=3, minSize=(15, 15))
-
-		for (ex,ey,ew,eh) in smile:
-
-			cv2.rectangle(face_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),1)
+			cv2.rectangle(face_color, (smile_x, smile_y), (smile_x + smile_w, smile_y + smile_h), (0,255,0), 2)
 
 	return desired_frame
 
@@ -73,6 +69,6 @@ def eye_detection_application_function(desired_frame):
 
 		for (eyes_x, eyes_y, eyes_w, eyes_h) in eyes:
 
-			cv2.rectangle(roi_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (250,0,0), 2)
+			cv2.rectangle(roi_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (255,0,0), 2)
 
 	return desired_frame
