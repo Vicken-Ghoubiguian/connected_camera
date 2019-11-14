@@ -151,9 +151,13 @@ def exploits_function(title):
 
 				is_activated_smile_detection = False
 
+				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Disable smile detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			else:
 
 				is_activated_smile_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Enable smile detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('e'):
 
