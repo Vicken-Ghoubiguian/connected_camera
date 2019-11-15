@@ -181,9 +181,13 @@ def exploits_function(title):
 
 				is_activated_mouth_detection = False
 
+				print(terminal_color_codes.terminal_color_codes.LightCyan + "[" + today_as_string + "]: Disable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			else:
 
 				is_activated_mouth_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.LightCyan + "[" + today_as_string + "]: Enable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		writing_frame_function(output_video_file, frame)
 
