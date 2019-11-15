@@ -45,6 +45,24 @@ def smile_detection_application_function(desired_frame):
 
 	return desired_frame
 
+def mouth_detection_application_function(desired_frame):
+
+	mouth_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_mouth.xml')
+
+	if mouth_cascade.empty():
+
+		raise IOError('Unable to load the mouth cascade classifier xml file')
+
+	mouth = mouth_cascade.detectMultiScale(desired_frame, 1.7, 11)
+
+	for (mouth_x, mouth_y, mouth_w, mouth_h) in mouth:
+
+		mouth_y = int(mouth_y - 0.15 * mouth_h)
+
+		cv2.rectangle(desired_frame, (mouth_x, mouth_y), (mouth_x + mouth_w, mouth_y + mouth_h), (0,0,250), 2)
+
+	return desired_frame
+
 def eye_detection_application_function(desired_frame):
 
 	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')
