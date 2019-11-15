@@ -7,7 +7,7 @@ def print_howto():
 		* Draw mode - press 'p'
 		* Painting mode - press 'c'
 
-		Activate body parts' detection:
+		Activate body parts detection:
 		* Activating face detection - press 'f'
 		* Activating eye detection - press 'e'
 		* Activating smile detection - press 's'
