@@ -1,6 +1,22 @@
 import cv2
 import numpy as np
 
+def right_ear_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
+
+	right_ear_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_rightear.xml')
+
+	if right_ear_cascade.empty():
+
+		raise IOError('Unable to load the right ear cascade classifier xml file')
+
+	right_ear = right_ear_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+
+	for (right_ear_x, right_ear_y, right_ear_w, right_ear_h) in right_ear:
+
+    		cv2.rectangle(desired_frame, (right_ear_x, right_ear_y), (right_ear_x + right_ear_w, right_ear_y + right_ear_h), (0,255,0), 3)
+
+	return desired_frame
+
 def left_ear_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 
 	left_ear_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_leftear.xml')

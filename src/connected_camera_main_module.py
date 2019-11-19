@@ -80,6 +80,8 @@ def exploits_function(title):
 
 	is_activated_left_ear_detection = False
 
+	is_activated_right_ear_detection = False
+
 	starting_stopwatch_time = 0
 
 	stoping_stopwatch_time = 0
@@ -201,6 +203,16 @@ def exploits_function(title):
 
 				is_activated_left_ear_detection = True
 
+		elif c == ord('r'):
+
+			if is_activated_right_ear_detection == True:
+
+				is_activated_right_ear_detection = False
+
+			else:
+
+				is_activated_right_ear_detection = True
+
 		writing_frame_function(output_video_file, frame)
 
 		if is_activated_smile_detection == True:
@@ -222,6 +234,10 @@ def exploits_function(title):
 		if is_activated_left_ear_detection == True:
 
 			frame = detection_module.left_ear_detection_application_function(frame)
+
+		if is_activated_right_ear_detection == True:
+
+			frame = detection_module.right_ear_detection_application_function(frame)
 
 		cv2.imshow('Cartoonization', frame)
 
