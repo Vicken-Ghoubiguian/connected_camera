@@ -82,6 +82,8 @@ def exploits_function(title):
 
 	is_activated_right_ear_detection = False
 
+	is_activated_nose_detection = False
+
 	starting_stopwatch_time = 0
 
 	stoping_stopwatch_time = 0
@@ -193,6 +195,16 @@ def exploits_function(title):
 
 				print(terminal_color_codes.terminal_color_codes.LightCyan + "[" + today_as_string + "]: Enable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+		elif c == ord('n'):
+
+			if is_activated_nose_detection == True:
+
+				is_activated_nose_detection = False
+
+			else:
+
+				is_activated_nose_detection = True
+
 		elif c == ord('l'):
 
 			if is_activated_left_ear_detection == True:
@@ -230,6 +242,10 @@ def exploits_function(title):
 		if is_activated_mouth_detection == True:
 
 			frame = detection_module.mouth_detection_application_function(frame)
+
+		if is_activated_nose_detection == True:
+
+			frame = detection_module.nose_detection_application_function(frame)
 
 		if is_activated_left_ear_detection == True:
 
