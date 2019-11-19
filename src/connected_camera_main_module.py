@@ -78,6 +78,8 @@ def exploits_function(title):
 
 	is_activated_mouth_detection = False
 
+	is_activated_left_ear_detection = False
+
 	starting_stopwatch_time = 0
 
 	stoping_stopwatch_time = 0
@@ -189,6 +191,16 @@ def exploits_function(title):
 
 				print(terminal_color_codes.terminal_color_codes.LightCyan + "[" + today_as_string + "]: Enable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+		elif c == ord('l'):
+
+			if is_activated_left_ear_detection == True:
+
+				is_activated_left_ear_detection = False
+
+			else:
+
+				is_activated_left_ear_detection = True
+
 		writing_frame_function(output_video_file, frame)
 
 		if is_activated_smile_detection == True:
@@ -206,6 +218,10 @@ def exploits_function(title):
 		if is_activated_mouth_detection == True:
 
 			frame = detection_module.mouth_detection_application_function(frame)
+
+		if is_activated_left_ear_detection == True:
+
+			frame = detection_module.left_ear_detection_application_function(frame)
 
 		cv2.imshow('Cartoonization', frame)
 
