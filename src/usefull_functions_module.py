@@ -12,6 +12,9 @@ def print_howto():
 		* Activating eye detection - press 'e'
 		* Activating smile detection - press 's'
 		* Activating mouth detection - press 'm'
+		* Activating nose detection - press 'n'
+		* Activating right ear detection - press 'r'
+		* Activating left ear detection - press 'l'
 
 		multimedia features:
 		* Shoot a photo regardless of the mode - press '1'

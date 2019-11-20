@@ -201,9 +201,13 @@ def exploits_function(title):
 
 				is_activated_nose_detection = False
 
+				print(terminal_color_codes.terminal_color_codes.White + "[" + today_as_string + "]: Disable nose detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			else:
 
 				is_activated_nose_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.White + "[" + today_as_string + "]: Enable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('l'):
 
@@ -211,9 +215,13 @@ def exploits_function(title):
 
 				is_activated_left_ear_detection = False
 
+				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Disable left ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			else:
 
 				is_activated_left_ear_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Enable left ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('r'):
 
@@ -221,9 +229,13 @@ def exploits_function(title):
 
 				is_activated_right_ear_detection = False
 
+				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Disable right ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			else:
 
 				is_activated_right_ear_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Enable right ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		writing_frame_function(output_video_file, frame)
 
