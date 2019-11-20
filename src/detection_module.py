@@ -9,7 +9,9 @@ def nose_detection_application_function(desired_frame, scaleFactor = 1.3, minNei
 
 		raise IOError('Unable to load the right ear cascade classifier xml file')
 
-	nose = nose_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	nose = nose_cascade.detectMultiScale(grayed_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
 
 	for (nose_x, nose_y, nose_w, nose_h) in nose:
 
@@ -25,7 +27,9 @@ def right_ear_detection_application_function(desired_frame, scaleFactor = 1.3, m
 
 		raise IOError('Unable to load the right ear cascade classifier xml file')
 
-	right_ear = right_ear_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	right_ear = right_ear_cascade.detectMultiScale(grayed_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
 
 	for (right_ear_x, right_ear_y, right_ear_w, right_ear_h) in right_ear:
 
@@ -41,7 +45,9 @@ def left_ear_detection_application_function(desired_frame, scaleFactor = 1.3, mi
 
 		raise IOError('Unable to load the left ear cascade classifier xml file')
 
-	left_ear = left_ear_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	left_ear = left_ear_cascade.detectMultiScale(grayed_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
 
 	for (left_ear_x, left_ear_y, left_ear_w, left_ear_h) in left_ear:
 
