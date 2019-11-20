@@ -207,7 +207,7 @@ def exploits_function(title):
 
 				is_activated_nose_detection = True
 
-				print(terminal_color_codes.terminal_color_codes.White + "[" + today_as_string + "]: Enable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+				print(terminal_color_codes.terminal_color_codes.White + "[" + today_as_string + "]: Enable nose detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('l'):
 
