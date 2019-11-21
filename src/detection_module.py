@@ -135,12 +135,12 @@ def eye_detection_application_function(desired_frame):
 
 	for (face_x, face_y, face_w, face_h) in face:
 
-		roi_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
+		face_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
 
-		eyes = eye_cascade.detectMultiScale(roi_color)
+		eyes = eye_cascade.detectMultiScale(face_color)
 
 		for (eyes_x, eyes_y, eyes_w, eyes_h) in eyes:
 
-			cv2.rectangle(roi_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (255,0,0), 2)
+			cv2.rectangle(face_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (255,0,0), 2)
 
 	return desired_frame
