@@ -148,6 +148,8 @@ def exploits_function(title):
 
 			shoot_a_photo_function('output_media_files/monImg', frame)
 
+			print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Photo shooted" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 		elif c == ord('2'):
 
 			if is_shoting_video == False:
