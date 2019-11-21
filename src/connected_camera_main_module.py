@@ -66,8 +66,6 @@ def exploits_function(title):
 
 	cap = cv2.VideoCapture(0)
 
-	#current_mode = None
-
 	is_shoting_video = False
 
 	is_activated_face_detection = False
@@ -148,7 +146,7 @@ def exploits_function(title):
 
 		if c == ord('1'):
 
-			shoot_a_photo_function('output_media_files/monImg', detection_module.frontal_facial_detection_application_function(frame))
+			shoot_a_photo_function('output_media_files/monImg', frame)
 
 		elif c == ord('2'):
 
