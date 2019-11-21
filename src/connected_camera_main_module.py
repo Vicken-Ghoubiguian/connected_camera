@@ -66,7 +66,7 @@ def exploits_function(title):
 
 	cap = cv2.VideoCapture(0)
 
-	current_mode = None
+	#current_mode = None
 
 	is_shoting_video = False
 
@@ -83,6 +83,8 @@ def exploits_function(title):
 	is_activated_right_ear_detection = False
 
 	is_activated_nose_detection = False
+
+	is_current_mode = 'o'
 
 	starting_stopwatch_time = 0
 
@@ -128,21 +130,21 @@ def exploits_function(title):
 
 			frame = detection_module.right_ear_detection_application_function(frame)
 
-		if c == 27:
-
-			break
-
-		if (c >= 97 and c <= 122) and c != current_mode:
-
-			current_mode = c
-
-		if current_mode == ord('p'):
+		if is_current_mode == 'p':
 
 			frame = cartoonizing_image_function(frame, ksize = 5, sketch_mode = True)
 
-		elif current_mode == ord('c'):
+		elif is_current_mode == 'c':
 
 			frame = cartoonizing_image_function(frame, ksize = 5, sketch_mode = False)
+
+		else:
+
+			frame = frame
+
+		if c == 27:
+
+			break
 
 		if c == ord('1'):
 
@@ -166,6 +168,24 @@ def exploits_function(title):
 				stoping_stopwatch_time = int(time.time())
 
 				print('End of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
+
+		elif c == ord('p'):
+
+			if is_current_mode != 'p':
+
+				is_current_mode = 'p'
+
+		elif c == ord('c'):
+
+			if is_current_mode != 'c':
+
+				is_current_mode = 'c'
+
+		elif c == ord('o'):
+
+			if is_current_mode != 'o':
+
+				is_current_mode = 'o'
 
 		elif c == ord('f'):
 
