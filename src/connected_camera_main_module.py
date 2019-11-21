@@ -173,17 +173,23 @@ def exploits_function(title):
 
 			if is_current_mode != 'p':
 
+				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Activation of printed mode" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 				is_current_mode = 'p'
 
 		elif c == ord('c'):
 
 			if is_current_mode != 'c':
 
+				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Activation of cartoonized mode" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 				is_current_mode = 'c'
 
 		elif c == ord('o'):
 
 			if is_current_mode != 'o':
+
+				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Activation of ordinary mode" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 				is_current_mode = 'o'
 
