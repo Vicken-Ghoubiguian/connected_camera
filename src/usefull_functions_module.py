@@ -6,6 +6,7 @@ def print_howto():
 		* Normal mode - press any keyboard key
 		* Draw mode - press 'p'
 		* Painting mode - press 'c'
+		* Black and white mode - press 'g'
 
 		Activate body parts detection:
 		* Activating face detection - press 'f'
@@ -16,7 +17,7 @@ def print_howto():
 		* Activating right ear detection - press 'r'
 		* Activating left ear detection - press 'l'
 
-		multimedia features:
+		Multimedia features:
 		* Shoot a photo regardless of the mode - press '1'
 		* Start/Stop shooting video - press '2'
 	""" + terminal_color_codes.terminal_color_codes.ResetAll)

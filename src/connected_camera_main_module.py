@@ -100,6 +100,10 @@ def exploits_function(title):
 
 			frame = frame_mode_module.cartoonizing_image_function(frame, ksize = 5, sketch_mode = False)
 
+		elif is_current_mode == 'g':
+
+			frame = frame_mode_module.black_and_white_frame_converting_function(frame)
+
 		else:
 
 			frame = frame
@@ -140,6 +144,14 @@ def exploits_function(title):
 				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of printed mode" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 				is_current_mode = 'p'
+
+		elif c == ord('g'):
+
+			if is_current_mode != 'g':
+
+				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of black and white mode" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				is_current_mode = 'g'
 
 		elif c == ord('c'):
 

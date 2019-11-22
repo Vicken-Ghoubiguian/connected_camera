@@ -1,6 +1,14 @@
 import cv2
 import numpy as np
 
+def black_and_white_frame_converting_function(desired_frame):
+
+	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	ret, black_and_white_frame = cv2.threshold(grayed_frame, 127, 255, cv2.THRESH_BINARY)
+
+	return black_and_white_frame
+
 def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
 
         #Definition of variables with respectives values
