@@ -5,11 +5,8 @@ import src.terminal_color_codes as terminal_color_codes
 import src.detection_module as detection_module
 import src.usefull_functions_module as usefull_functions_module
 import src.videoWriter_module as videoWriter_module
+import src.photography_management_module as photography_management_module
 from datetime import datetime
-
-def shoot_a_photo_function(title, desired_frame):
-
-	cv2.imwrite(title + '.jpg', desired_frame, [cv2.IMWRITE_JPEG_QUALITY, 90])
 
 def exploits_function(title):
 
@@ -101,7 +98,7 @@ def exploits_function(title):
 
 		if c == ord('1'):
 
-			shoot_a_photo_function('output_media_files/monImg', frame)
+			photography_management_module.shoot_a_photo_function('output_media_files/monImg', frame)
 
 			print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Photo shooted" + terminal_color_codes.terminal_color_codes.ResetAll)
 
