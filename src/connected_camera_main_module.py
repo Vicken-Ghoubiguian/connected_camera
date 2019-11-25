@@ -269,7 +269,7 @@ def exploits_function(title):
 
 		writing_frame_function(output_video_file, frame)
 
-		cv2.imshow('Cartoonization', frame)
+		cv2.imshow('Connected camera', frame)
 
 	cap.release()
 
