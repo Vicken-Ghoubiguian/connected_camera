@@ -1,11 +1,11 @@
 import cv2
+from datetime import datetime
 import src.frame_mode_module as frame_mode_module
 import src.terminal_color_codes as terminal_color_codes
 import src.detection_module as detection_module
 import src.usefull_functions_module as usefull_functions_module
 import src.videoWriter_module as videoWriter_module
 import src.photography_management_module as photography_management_module
-from datetime import datetime
 
 def exploits_function(title):
 
@@ -31,7 +31,7 @@ def exploits_function(title):
 
 	is_current_mode = 'o'
 
-	output_video_file = videoWriter_module.initialisation_of_videoWriter_function(title)
+	output_video_file = None
 
 	while True:
 
@@ -103,10 +103,17 @@ def exploits_function(title):
 
 				is_shoting_video = True
 
+				output_video_file = videoWriter_module.initialisation_of_videoWriter_function(title)
+
 				print('Beginning of video shooting...')
+
 			else:
 
 				is_shoting_video = False
+
+				videoWriter_module.releasing_videoWriter_function(output_video_file)
+
+				output_video_file = None
 
 				print('End of video shooting...')
 
@@ -240,12 +247,12 @@ def exploits_function(title):
 
 				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Enable right ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
-		videoWriter_module.writing_frame_function(output_video_file, frame)
+		if is_shoting_video == True:
+
+			videoWriter_module.writing_frame_function(output_video_file, frame)
 
 		cv2.imshow('Connected camera', frame)
 
 	cap.release()
-
-	videoWriter_module.releasing_videoWriter_function(output_video_file)
 
 	cv2.destroyAllWindows()
