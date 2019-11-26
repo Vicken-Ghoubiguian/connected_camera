@@ -89,6 +89,14 @@ def exploits_function(title):
 
 		if c == 27:
 
+			if is_shoting_video == True:
+
+				videoWriter_module.releasing_videoWriter_function(output_video_file)
+
+				output_video_file = None
+
+				print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: End of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
+
 			break
 
 		if c == ord('1'):
@@ -105,7 +113,7 @@ def exploits_function(title):
 
 				output_video_file = videoWriter_module.initialisation_of_videoWriter_function(title)
 
-				print('Beginning of video shooting...')
+				print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: Beginning of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 
@@ -115,7 +123,7 @@ def exploits_function(title):
 
 				output_video_file = None
 
-				print('End of video shooting...')
+				print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: End of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 		elif c == ord('p'):
 

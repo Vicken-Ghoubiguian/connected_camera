@@ -1,6 +1,6 @@
 import cv2
 
-def initialisation_of_videoWriter_function(desired_title, desired_format = '.mp4', desired_fourcc = 'MP4V'):
+def initialisation_of_videoWriter_function(desired_title, desired_format = '.avi', desired_fourcc = 'XVID'):
 
         fourcc = cv2.VideoWriter_fourcc(*desired_fourcc)
 
