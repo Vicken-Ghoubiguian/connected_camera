@@ -1,5 +1,4 @@
 import cv2
-import time
 import src.frame_mode_module as frame_mode_module
 import src.terminal_color_codes as terminal_color_codes
 import src.detection_module as detection_module
@@ -31,10 +30,6 @@ def exploits_function(title):
 	is_activated_nose_detection = False
 
 	is_current_mode = 'o'
-
-	starting_stopwatch_time = 0
-
-	stoping_stopwatch_time = 0
 
 	output_video_file = videoWriter_module.initialisation_of_videoWriter_function(title)
 
@@ -108,18 +103,12 @@ def exploits_function(title):
 
 				is_shoting_video = True
 
-				starting_stopwatch_time = int(time.time())
-
-				stoping_stopwatch_time = int(time.time())
-
-				print('Beginning of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
+				print('Beginning of video shooting...')
 			else:
 
 				is_shoting_video = False
 
-				stoping_stopwatch_time = int(time.time())
-
-				print('End of video shooting...' + str(stoping_stopwatch_time - starting_stopwatch_time))
+				print('End of video shooting...')
 
 		elif c == ord('p'):
 
