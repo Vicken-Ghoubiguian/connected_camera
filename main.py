@@ -1,5 +1,12 @@
+import argparse
 import src.connected_camera_main_module as main_module
 
 if __name__ == '__main__':
 
-	main_module.exploits_function('outputVideo')
+	arguments_parser = argparse.ArgumentParser()
+
+	arguments_parser.add_argument('-output_video_name', action = 'store', dest = 'output_video_name', help = 'Store the video name informed by the user')
+
+	arguments_results = arguments_parser.parse_args()
+
+	main_module.exploits_function(arguments_results.output_video_name)
