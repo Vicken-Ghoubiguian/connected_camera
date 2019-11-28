@@ -109,11 +109,17 @@ def exploits_function(output_video_name, output_photo_name):
 
 			if is_shoting_video == False:
 
-				is_shoting_video = True
-
 				output_video_file = videoWriter_module.initialisation_of_videoWriter_function(output_video_name)
 
-				print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: Beginning of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
+				if output_video_file != None:
+
+					is_shoting_video = True
+
+					print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: Beginning of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				else:
+
+					print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: Beginning of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 
