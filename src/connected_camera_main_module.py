@@ -7,7 +7,7 @@ import src.usefull_functions_module as usefull_functions_module
 import src.videoWriter_module as videoWriter_module
 import src.photography_management_module as photography_management_module
 
-def exploits_function(output_video_name, output_video_format, output_photo_name):
+def exploits_function(output_video_name, output_video_format, output_photo_name, output_photo_format):
 
 	usefull_functions_module.print_howto()
 
@@ -101,7 +101,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name)
 
 		if c == ord('1'):
 
-			photography_management_module.shoot_a_photo_function('output_media_files/' + output_photo_name, frame)
+			photography_management_module.shoot_a_photo_function('output_media_files/' + output_photo_name, output_photo_format, frame)
 
 			print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Photo shooted" + terminal_color_codes.terminal_color_codes.ResetAll)
 
