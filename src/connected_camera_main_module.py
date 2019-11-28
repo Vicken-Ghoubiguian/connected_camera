@@ -7,7 +7,7 @@ import src.usefull_functions_module as usefull_functions_module
 import src.videoWriter_module as videoWriter_module
 import src.photography_management_module as photography_management_module
 
-def exploits_function(output_video_name, output_photo_name):
+def exploits_function(output_video_name, output_video_format, output_photo_name):
 
 	usefull_functions_module.print_howto()
 
@@ -109,7 +109,7 @@ def exploits_function(output_video_name, output_photo_name):
 
 			if is_shoting_video == False:
 
-				output_video_file = videoWriter_module.initialisation_of_videoWriter_function(output_video_name)
+				output_video_file = videoWriter_module.initialisation_of_videoWriter_function(output_video_name, output_video_format)
 
 				if output_video_file != None:
 
@@ -119,7 +119,7 @@ def exploits_function(output_video_name, output_photo_name):
 
 				else:
 
-					print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: Beginning of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
+					print(terminal_color_codes.terminal_color_codes.Red + "[" + today_as_string + "]: Video doesn't shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 			else:
 

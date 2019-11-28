@@ -1,10 +1,10 @@
 import cv2
 
-def initialisation_of_videoWriter_function(desired_title, desired_format = '.avi'):
+def initialisation_of_videoWriter_function(desired_title, desired_format):
 
 	fourcc_list = {
 		".avi": "XVID",
-		".mp4": "MPV4"
+		".mp4": "MP4V"
 	}
 
 	if desired_format in fourcc_list:
