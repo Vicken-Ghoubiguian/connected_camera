@@ -179,6 +179,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of ordinary mode" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of ordinary mode\n")
+
 				is_current_mode = 'o'
 
 		elif c == ord('f'):
@@ -189,11 +191,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Disable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable facial detection\n")
+
 			else:
 
 				is_activated_face_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.LightGreen + "[" + today_as_string + "]: Enable facial detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable facial detection\n")
 
 		elif c == ord('s'):
 
@@ -203,11 +209,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Disable smile detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable smile detection\n")
+
 			else:
 
 				is_activated_smile_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Enable smile detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable smile detection\n")
 
 		elif c == ord('e'):
 
@@ -217,11 +227,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Disable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable eyes detection\n")
+
 			else:
 
 				is_activated_eye_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Enable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable eyes detection\n")
 
 		elif c == ord('m'):
 
@@ -231,11 +245,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.LightCyan + "[" + today_as_string + "]: Disable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable mouth detection\n")
+
 			else:
 
 				is_activated_mouth_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.LightCyan + "[" + today_as_string + "]: Enable mouth detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable mouth detection\n")
 
 		elif c == ord('n'):
 
@@ -245,11 +263,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.White + "[" + today_as_string + "]: Disable nose detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable nose detection\n")
+
 			else:
 
 				is_activated_nose_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.White + "[" + today_as_string + "]: Enable nose detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable nose detection\n")
 
 		elif c == ord('l'):
 
@@ -259,11 +281,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Disable left ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable left ear detection\n")
+
 			else:
 
 				is_activated_left_ear_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Enable left ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable left ear detection\n")
 
 		elif c == ord('r'):
 
@@ -273,11 +299,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Disable right ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable right ear detection\n")
+
 			else:
 
 				is_activated_right_ear_detection = True
 
 				print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Enable right ear detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable right ear detection\n")
 
 		if is_shoting_video == True:
 
