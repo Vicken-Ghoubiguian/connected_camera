@@ -99,6 +99,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: End of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
+
 			break
 
 		if c == ord('1'):
@@ -106,6 +108,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 			photography_management_module.shoot_a_photo_function('output_media_files/' + output_photo_name, output_photo_format, frame)
 
 			print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Photo shooted" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+			usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Photo shooted\n")
 
 		elif c == ord('2'):
 
@@ -119,9 +123,13 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 					print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: Beginning of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+					usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Beginning of video shooting\n")
+
 				else:
 
 					print(terminal_color_codes.terminal_color_codes.Red + "[" + today_as_string + "]: Video doesn't shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+					usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Video doesn't shooting\n")
 
 			else:
 
@@ -133,11 +141,15 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.Yellow + "[" + today_as_string + "]: End of video shooting" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
+
 		elif c == ord('p'):
 
 			if is_current_mode != 'p':
 
 				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of printed mode" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of printed mode\n")
 
 				is_current_mode = 'p'
 
@@ -147,6 +159,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of black and white mode" + terminal_color_codes.terminal_color_codes.ResetAll)
 
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of black and white mode\n")
+
 				is_current_mode = 'g'
 
 		elif c == ord('c'):
@@ -154,6 +168,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 			if is_current_mode != 'c':
 
 				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of cartoonized mode" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of cartoonized mode\n")
 
 				is_current_mode = 'c'
 
