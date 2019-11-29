@@ -33,6 +33,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 	output_video_file = None
 
+	usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', '-------------------------------------\n')
+
 	while True:
 
 		ret, frame = cap.read()
@@ -268,5 +270,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 		cv2.imshow('Connected camera', frame)
 
 	cap.release()
+
+	usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', '-------------------------------------\n')
 
 	cv2.destroyAllWindows()

@@ -1,6 +1,7 @@
 import src.terminal_color_codes as terminal_color_codes
 
 def print_howto():
+
 	print(terminal_color_codes.terminal_color_codes.Yellow + """
 		Change mode:
 		* Normal mode - press any keyboard key
@@ -21,3 +22,11 @@ def print_howto():
 		* Shoot a photo regardless of the mode - press '1'
 		* Start/Stop shooting video - press '2'
 	""" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+def writing_in_log_files_function(desired_log_function, desired_log_to_write):
+
+	log_file = open(desired_log_function, 'a')
+
+	log_file.write(desired_log_to_write)
+
+	log_file.close()
