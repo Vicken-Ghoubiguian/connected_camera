@@ -11,3 +11,7 @@ This connected camera has the following features:
 * can modify mode among the following: normal, cartoonized without colors, cartoonized with colors,
 
 * can share videos or photos on different social networks (Facebook, Twitter, LinkedIn, YouTube and Instagram).
+
+This camera can take photos in this format: '.jpg', '.jpeg', '.jpe', '.jp2', '.png', '.tiff', '.tif', '.bmp', '.dib', '.pbm', '.pgm', '.ppm'.
+
+This camera can record videos in this format: '.avi', '.mp4'.
