@@ -105,7 +105,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 		if c == ord('1'):
 
-			photography_management_module.shoot_a_photo_function('output_media_files/' + output_photo_name, output_photo_format, frame)
+			photography_management_module.shoot_a_photo_function('output_media_files/photos/' + output_photo_name, output_photo_format, frame)
 
 			print(terminal_color_codes.terminal_color_codes.DarkGray + "[" + today_as_string + "]: Photo shooted" + terminal_color_codes.terminal_color_codes.ResetAll)
 
@@ -115,7 +115,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			if is_shoting_video == False:
 
-				output_video_file = videoWriter_module.initialisation_of_videoWriter_function(output_video_name, output_video_format)
+				output_video_file = videoWriter_module.initialisation_of_videoWriter_function('output_media_files/videos/' + output_video_name, output_video_format)
 
 				if output_video_file != None:
 
