@@ -19,6 +19,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 	is_activated_eye_detection = False
 
+	is_activated_tree_eye_glasses_detection = False
+
 	is_activated_smile_detection = False
 
 	is_activated_mouth_detection = False
@@ -56,6 +58,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 		if is_activated_eye_detection == True:
 
 			frame = detection_module.eye_detection_application_function(frame)
+
+		if is_activated_tree_eye_glasses_detection == True:
+
+			frame = detection_module.eye_tree_eyeglasses_detection_application_function(frame)
 
 		if is_activated_mouth_detection == True:
 
@@ -236,6 +242,24 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Enable eyes detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable eyes detection\n")
+
+		elif c == ord('t'):
+
+			if is_activated_tree_eye_glasses_detection == True:
+
+				is_activated_tree_eye_glasses_detection = False
+
+				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Disable tree eye glasses detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable tree eye glasses detection\n")
+
+			else:
+
+				is_activated_tree_eye_glasses_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.LightBlue + "[" + today_as_string + "]: Enable tree eye glasses detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable tree eye glasses detection\n")
 
 		elif c == ord('m'):
 

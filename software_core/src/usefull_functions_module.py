@@ -12,6 +12,7 @@ def print_howto():
 		Activate body parts detection:
 		* Activating face detection - press 'f'
 		* Activating eye detection - press 'e'
+		* Activating tree eye glasses - press 't'
 		* Activating smile detection - press 's'
 		* Activating mouth detection - press 'm'
 		* Activating nose detection - press 'n'
