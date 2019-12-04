@@ -1,6 +1,34 @@
 import cv2
 import numpy as np
 
+def eye_tree_eyeglasses_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
+
+	face_cascade =  cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_default.xml')
+
+	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye_tree_eyeglasses.xml')
+
+	if face_cascade.empty():
+
+		 raise IOError('Unable to load the face cascade classifier xml file')
+
+	if eye_cascade.empty():
+
+		raise IOError('Unable to load the eye tree eyeglasses cascade classifier xml file')
+
+	face = face_cascade.detectMultiScale(desired_frame, 1.3, 5)
+
+	for (face_x, face_y, face_w, face_h) in face:
+
+                face_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
+
+                eyes = eye_cascade.detectMultiScale(face_color)
+
+		for (eyes_x, eyes_y, eyes_w, eyes_h) in eyes:
+
+                        cv2.rectangle(face_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (255,0,0), 2)
+
+        return desired_frame
+
 def nose_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 
 	nose_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_nose.xml')
