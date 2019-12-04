@@ -9,7 +9,7 @@ def eye_tree_eyeglasses_detection_application_function(desired_frame, scaleFacto
 
 	if face_cascade.empty():
 
-		 raise IOError('Unable to load the face cascade classifier xml file')
+		raise IOError('Unable to load the face cascade classifier xml file')
 
 	if eye_cascade.empty():
 
@@ -19,15 +19,15 @@ def eye_tree_eyeglasses_detection_application_function(desired_frame, scaleFacto
 
 	for (face_x, face_y, face_w, face_h) in face:
 
-                face_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
+		face_color = desired_frame[face_y : face_y + face_h, face_x : face_x + face_w]
 
-                eyes = eye_cascade.detectMultiScale(face_color)
+		eyes = eye_cascade.detectMultiScale(face_color)
 
 		for (eyes_x, eyes_y, eyes_w, eyes_h) in eyes:
 
-                        cv2.rectangle(face_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (255,0,0), 2)
+			cv2.rectangle(face_color,(eyes_x, eyes_y),(eyes_x + eyes_w, eyes_y + eyes_h), (255,0,0), 2)
 
-        return desired_frame
+	return desired_frame
 
 def nose_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 

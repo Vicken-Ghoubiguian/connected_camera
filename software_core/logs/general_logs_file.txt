@@ -32,3 +32,7 @@
 [décembre 03, 2019 at 04:38]: Enable facial detection
 [décembre 03, 2019 at 04:38]: End of video shooting
 -------------------------------------
+-------------------------------------
+[décembre 04, 2019 at 07:55]: Enable eyes detection
+[décembre 04, 2019 at 07:55]: Disable eyes detection
+-------------------------------------
