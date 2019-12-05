@@ -17,6 +17,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 	is_activated_face_detection = False
 
+	is_activated_profile_face_detection = False
+
 	is_activated_eye_detection = False
 
 	is_activated_tree_eye_glasses_detection = False
@@ -54,6 +56,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 		if is_activated_face_detection == True:
 
 			frame = detection_module.frontal_facial_detection_application_function(frame)
+
+		if is_activated_profile_face_detection == True:
+
+			frame = detection_module.profile_facial_detection_application_function(frame)
 
 		if is_activated_eye_detection == True:
 
@@ -224,6 +230,24 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Enable smile detection" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable smile detection\n")
+
+		elif c == ord('d'):
+
+			if is_activated_profile_face_detection == True:
+
+				is_activated_profile_face_detection = False
+
+				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Disable profile face detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable profile face detection\n")
+
+			else:
+
+				is_activated_profile_face_detection = True
+
+				print(terminal_color_codes.terminal_color_codes.LightMagenta + "[" + today_as_string + "]: Enable profile face detection" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable profile face detection\n")
 
 		elif c == ord('e'):
 

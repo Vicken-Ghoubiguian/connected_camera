@@ -71,3 +71,8 @@
 [décembre 04, 2019 at 01:04]: Enable tree eye glasses detection
 [décembre 04, 2019 at 01:04]: Disable tree eye glasses detection
 -------------------------------------
+-------------------------------------
+[décembre 05, 2019 at 09:35]: Enable profile face detection
+[décembre 05, 2019 at 09:35]: Beginning of video shooting
+[décembre 05, 2019 at 09:35]: End of video shooting
+-------------------------------------
