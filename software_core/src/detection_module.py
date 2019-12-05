@@ -83,6 +83,22 @@ def left_ear_detection_application_function(desired_frame, scaleFactor = 1.3, mi
 
 	return desired_frame
 
+def profile_facial_detection_application_function(desired_frame, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
+
+        face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_profileface.xml')
+
+        if face_cascade.empty():
+
+                raise IOError('Unable to load the face cascade classifier xml file')
+
+        face = face_cascade.detectMultiScale(desired_frame, scaleFactor = scaleFactor, minNeighbors = minNeighbors)
+
+        for (face_x, face_y, face_w, face_h) in face:
+
+                cv2.rectangle(desired_frame, (face_x, face_y), (face_x + face_w, face_y + face_h), (0,255,0), 3)
+
+        return desired_frame
+
 def frontal_facial_detection_application_function(desired_frame, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
 
 	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
