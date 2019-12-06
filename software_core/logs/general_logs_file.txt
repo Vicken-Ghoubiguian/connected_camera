@@ -76,3 +76,9 @@
 [décembre 05, 2019 at 09:35]: Beginning of video shooting
 [décembre 05, 2019 at 09:35]: End of video shooting
 -------------------------------------
+-------------------------------------
+[décembre 06, 2019 at 08:00]: Enable facial detection
+-------------------------------------
+-------------------------------------
+[décembre 06, 2019 at 08:19]: Activation of edge detection mode
+-------------------------------------

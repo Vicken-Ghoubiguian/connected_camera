@@ -8,6 +8,7 @@ def print_howto():
 		* Draw mode - press 'p'
 		* Painting mode - press 'c'
 		* Black and white mode - press 'g'
+		* Edge detection mode - press 'y'
 
 		Activate body parts detection:
 		* Activating face detection - press 'f'

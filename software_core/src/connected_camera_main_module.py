@@ -97,6 +97,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			frame = frame_mode_module.black_and_white_frame_converting_function(frame)
 
+		elif is_current_mode == 'y':
+
+			frame = frame_mode_module.edge_detection_mode_function(frame)
+
 		else:
 
 			frame = frame
@@ -164,6 +168,16 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of printed mode\n")
 
 				is_current_mode = 'p'
+
+		elif c == ord('y'):
+
+			if is_current_mode != 'y':
+
+				print(terminal_color_codes.terminal_color_codes.BackgroundGreen + "[" + today_as_string + "]: Activation of edge detection mode" + terminal_color_codes.terminal_color_codes.ResetAll)
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of edge detection mode\n")
+
+				is_current_mode = 'y'
 
 		elif c == ord('g'):
 

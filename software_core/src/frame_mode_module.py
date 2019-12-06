@@ -1,6 +1,12 @@
 import cv2
 import numpy as np
 
+def edge_detection_mode_function(desired_frame):
+
+	frame_with_edge_detection_mode = cv2.Canny(desired_frame,100,300)
+
+	return frame_with_edge_detection_mode
+
 def black_and_white_frame_converting_function(desired_frame):
 
 	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
@@ -44,4 +50,3 @@ def cartoonizing_image_function(img, ksize = 5, sketch_mode = False):
         dst = cv2.bitwise_and(img_output, img_output, mask = mask)
 
         return dst
-
