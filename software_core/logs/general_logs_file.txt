@@ -82,3 +82,12 @@
 -------------------------------------
 [décembre 06, 2019 at 08:19]: Activation of edge detection mode
 -------------------------------------
+-------------------------------------
+[décembre 06, 2019 at 05:03]: Activation of vintage mode
+-------------------------------------
+[décembre 06, 2019 at 05:04]: Activation of vintage mode
+[décembre 06, 2019 at 05:04]: Activation of ordinary mode
+[décembre 06, 2019 at 05:04]: Activation of vintage mode
+[décembre 06, 2019 at 05:04]: Enable facial detection
+[décembre 06, 2019 at 05:04]: Disable facial detection
+-------------------------------------

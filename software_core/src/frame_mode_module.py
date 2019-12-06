@@ -1,6 +1,25 @@
 import cv2
 import numpy as np
 
+def vintage_effect_function(desired_frame):
+
+	desired_frame_rows, desired_frame_cols = desired_frame.shape[:2]
+
+	#Creation of the gaussian filter
+	kernel_x = cv2.getGaussianKernel(desired_frame_cols,200)
+	kernel_y = cv2.getGaussianKernel(desired_frame_rows,200)
+	kernel = kernel_y * kernel_x.T
+
+	filter = 255 * kernel / np.linalg.norm(kernel)
+	vintage_desired_frame = np.copy(desired_frame)
+
+	#Application of filter
+	for i in range(3):
+
+		vintage_desired_frame[:,:,i] = vintage_desired_frame[:,:,i] * filter
+
+	return vintage_desired_frame
+
 def edge_detection_mode_function(desired_frame):
 
 	frame_with_edge_detection_mode = cv2.Canny(desired_frame,100,300)
