@@ -1,4 +1,5 @@
 import src.terminal_color_codes as terminal_color_codes
+from datetime import datetime
 
 def print_howto():
 
@@ -26,9 +27,21 @@ def print_howto():
 		* Start/Stop shooting video - press '2'
 	""" + terminal_color_codes.terminal_color_codes.ResetAll)
 
-def writing_in_log_files_function(desired_log_function, desired_log_to_write):
+def today_as_string_returning_function(desired_format):
 
-	log_file = open(desired_log_function, 'a')
+	today = datetime.today()
+
+	today_as_string = today.strftime(desired_format)
+
+	return today_as_string
+
+def writing_in_console_function(desired_terminal_color_code, desired_log_to_write):
+
+	print(desired_terminal_color_code + desired_log_to_write + terminal_color_codes.terminal_color_codes.ResetAll)
+
+def writing_in_log_files_function(desired_log_file, desired_log_to_write):
+
+	log_file = open(desired_log_file, 'a')
 
 	log_file.write(desired_log_to_write)
 
