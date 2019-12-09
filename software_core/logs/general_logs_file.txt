@@ -107,3 +107,41 @@
 [décembre 09, 2019 at 12:35]: Activation of hue saturation lightness mode
 [décembre 09, 2019 at 12:35]: Activation of gray and white mode
 -------------------------------------
+-------------------------------------
+[décembre 09, 2019 at 01:59]: Activation of edge detection mode
+[décembre 09, 2019 at 01:59]: Activation of gray and white mode
+[décembre 09, 2019 at 01:59]: Activation of hue saturation lightness mode
+[décembre 09, 2019 at 01:59]: Enable facial detection
+[décembre 09, 2019 at 01:59]: Disable facial detection
+[décembre 09, 2019 at 02:00]: Enable eyes detection
+-------------------------------------
+-------------------------------------
+[décembre 09, 2019 at 02:02]: Activation of hue saturation lightness mode
+[décembre 09, 2019 at 02:02]: Enable eyes detection
+[décembre 09, 2019 at 02:02]: Enable facial detection
+[décembre 09, 2019 at 02:02]: Enable smile detection
+[décembre 09, 2019 at 02:02]: Enable mouth detection
+[décembre 09, 2019 at 02:02]: Disable mouth detection
+[décembre 09, 2019 at 02:02]: Disable smile detection
+[décembre 09, 2019 at 02:02]: Disable eyes detection
+-------------------------------------
+-------------------------------------
+[décembre 09, 2019 at 02:04]: Activation of hue saturation lightness mode
+[décembre 09, 2019 at 02:04]: Enable facial detection
+[décembre 09, 2019 at 02:05]: Enable profile face detection
+[décembre 09, 2019 at 02:06]: Activation of ordinary mode
+[décembre 09, 2019 at 02:06]: Activation of hue saturation lightness mode
+[décembre 09, 2019 at 02:14]: Activation of ordinary mode
+[décembre 09, 2019 at 02:14]: Enable eyes detection
+[décembre 09, 2019 at 02:15]: Activation of hue saturation lightness mode
+[décembre 09, 2019 at 02:15]: Disable eyes detection
+-------------------------------------
+-------------------------------------
+[décembre 09, 2019 at 04:26]: Activation of negative or inverted mode
+-------------------------------------
+[décembre 09, 2019 at 04:27]: Activation of negative or inverted mode
+-------------------------------------
+[décembre 09, 2019 at 04:27]: Activation of negative or inverted mode
+-------------------------------------
+[décembre 09, 2019 at 04:28]: Activation of negative or inverted mode
+-------------------------------------

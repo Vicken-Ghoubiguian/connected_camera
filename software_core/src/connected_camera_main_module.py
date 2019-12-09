@@ -82,6 +82,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			frame = detection_module.right_ear_detection_application_function(frame)
 
+		if is_current_mode == 'i':
+
+			frame = frame_mode_module.negative_or_inverted_effect_function(frame)
+
 		if is_current_mode == 'p':
 
 			frame = frame_mode_module.cartoonizing_image_function(frame, ksize = 5, sketch_mode = True)
@@ -177,6 +181,16 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of printed mode\n")
 
 				is_current_mode = 'p'
+
+		elif c == ord('i'):
+
+			if is_current_mode != 'i':
+
+				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundRed, "[" + today_as_string + "]: Activation of negative or inverted mode")
+
+				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of negative or inverted mode\n")
+
+				is_current_mode = 'i'
 
 		elif c == ord('w'):
 

@@ -1,6 +1,12 @@
 import cv2
 import numpy as np
 
+def negative_or_inverted_effect_function(desired_frame):
+
+	frame_with_negative_or_inverted_effect = cv2.bitwise_not(desired_frame)
+
+	return frame_with_negative_or_inverted_effect
+
 def vintage_effect_function(desired_frame):
 
 	desired_frame_rows, desired_frame_cols = desired_frame.shape[:2]

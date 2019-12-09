@@ -11,7 +11,8 @@ def print_howto():
 		* Black and white mode - press 'g'
 		* Edge detection mode - press 'y'
 		* Hue saturation lightness mode - press 'h'
-		* Gray and white - press 'w'
+		* Gray and white mode - press 'w'
+		* Negative or inverted mode - press 'i'
 
 		Activate body parts detection:
 		* Activating face detection - press 'f'
