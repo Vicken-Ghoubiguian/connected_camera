@@ -102,6 +102,14 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			frame = frame_mode_module.edge_detection_mode_function(frame)
 
+		elif is_current_mode == 'h':
+
+			frame = frame_mode_module.hue_saturation_lightness_effect_function(frame)
+
+		elif is_current_mode == 'w':
+
+			frame = frame_mode_module.gray_and_white_effect_function(frame)
+
 		else:
 
 			frame = frame
@@ -169,6 +177,26 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of printed mode\n")
 
 				is_current_mode = 'p'
+
+		elif c == ord('w'):
+
+                        if is_current_mode != 'w':
+
+                                usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundCyan, "[" + today_as_string + "]: Activation of gray and white mode")
+
+                                usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of gray and white mode\n")
+
+                                is_current_mode = 'w'
+
+		elif c == ord('h'):
+
+                        if is_current_mode != 'h':
+
+                                usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundCyan, "[" + today_as_string + "]: Activation of hue saturation lightness mode")
+
+                                usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of hue saturation lightness mode\n")
+
+                                is_current_mode = 'h'
 
 		elif c == ord('y'):
 
