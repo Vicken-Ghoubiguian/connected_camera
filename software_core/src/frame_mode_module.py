@@ -26,6 +26,18 @@ def edge_detection_mode_function(desired_frame):
 
 	return frame_with_edge_detection_mode
 
+def gray_and_white_effect_function(desired_frame):
+
+	gray_and_white_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	return gray_and_white_frame
+
+def hue_saturation_lightness_effect_function(desired_frame):
+
+	hue_saturation_lightness_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2HSV)
+
+	return hue_saturation_lightness_frame
+
 def black_and_white_frame_converting_function(desired_frame):
 
 	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
