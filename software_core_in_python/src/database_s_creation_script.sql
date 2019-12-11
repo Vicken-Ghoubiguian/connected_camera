@@ -37,8 +37,8 @@ CREATE TABLE IF NOT EXISTS sound_effect_files_to_shot_photos_table(
 );
 
 -- Insertion of sound effect files to shot photos --
-INSERT INTO supported_image_formats_table(file_path, file_name) VALUES("sounds/4_seconds_long_paparazzi_camera_sound.mp3", "Paparazzi camera sound");
-INSERT INTO supported_image_formats_table(file_path, file_name) VALUES("sounds/1_second_long_old_camera_sound.mp3", "Old camera sound");
+INSERT INTO sound_effect_files_to_shot_photos_table(file_path, file_name) VALUES("sounds/4_seconds_long_paparazzi_camera_sound.mp3", "Paparazzi camera sound");
+INSERT INTO sound_effect_files_to_shot_photos_table(file_path, file_name) VALUES("sounds/1_second_long_old_camera_sound.mp3", "Old camera sound");
 
 -- Creation of the sound_effect_files_to_record_videos_table table --
 CREATE TABLE IF NOT EXISTS sound_effect_files_to_record_videos_table(
@@ -48,4 +48,4 @@ CREATE TABLE IF NOT EXISTS sound_effect_files_to_record_videos_table(
 );
 
 -- Insertion of sound effect files to shot photos --
-INSERT INTO supported_image_formats_table(file_path, file_name) VALUES("sounds/16_seconds_old_video_projector_sound.mp3", "Old video projector sound");
+INSERT INTO sound_effect_files_to_record_videos_table(file_path, file_name) VALUES("sounds/16_seconds_old_video_projector_sound.mp3", "Old video projector sound");
