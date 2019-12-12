@@ -2,7 +2,7 @@ import sqlite3
 
 def verification_of_datas_existence_function(sough_field, concerned_table, concerned_field, concerned_data):
 
-	results_number = None
+	data_exists = False
 
 	try:
 
@@ -10,12 +10,13 @@ def verification_of_datas_existence_function(sough_field, concerned_table, conce
 
 		connexion_s_cursor = connected_camera_s_database_connexion.cursor()
 
-		#sql_query_string = "SELECT COUNT(" + sough_field + ") FROM " + concerned_table + " WHERE " + concerned_field + " = " + concerned_data + ""
 		sql_query_string = "SELECT COUNT({}) FROM {} WHERE {} = {}".format(sough_field, concerned_table, concerned_field, concerned_data)
 
 		connexion_s_cursor.execute(sql_query_string)
 
 		results_number = connexion_s_cursor.fetchone()
+
+		data_exists = bool(results_number[0])
 
 		connexion_s_cursor.close()
 
@@ -29,4 +30,4 @@ def verification_of_datas_existence_function(sough_field, concerned_table, conce
 
 			connected_camera_s_database_connexion.close()
 
-		return results_number
+		return data_exists
