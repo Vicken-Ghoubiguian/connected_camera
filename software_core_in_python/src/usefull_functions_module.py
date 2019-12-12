@@ -28,6 +28,9 @@ def print_howto():
 		Multimedia features:
 		* Shoot a photo regardless of the mode - press '1'
 		* Start/Stop shooting video - press '2'
+
+		To leave or to quit:
+		* To leave or to quit the connected camera - press 'Esc'
 	""" + terminal_color_codes.terminal_color_codes.ResetAll)
 
 def today_as_string_returning_function(desired_format):
