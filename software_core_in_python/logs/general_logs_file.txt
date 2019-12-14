@@ -154,3 +154,32 @@
 -------------------------------------
 [décembre 14, 2019 at 09:48]: Photo shooted
 -------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:02]: Beginning of video shooting
+[décembre 14, 2019 at 10:02]: End of video shooting
+-------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:03]: Beginning of video shooting
+[décembre 14, 2019 at 10:03]: End of video shooting
+-------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:03]: Beginning of video shooting
+[décembre 14, 2019 at 10:03]: End of video shooting
+-------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:05]: Beginning of video shooting
+[décembre 14, 2019 at 10:05]: End of video shooting
+-------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:08]: Beginning of video shooting
+[décembre 14, 2019 at 10:08]: End of video shooting
+-------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:30]: Beginning of video shooting
+[décembre 14, 2019 at 10:30]: End of video shooting
+-------------------------------------
+-------------------------------------
+[décembre 14, 2019 at 10:32]: Beginning of video shooting
+[décembre 14, 2019 at 10:32]: Enable facial detection
+[décembre 14, 2019 at 10:32]: End of video shooting
+-------------------------------------
