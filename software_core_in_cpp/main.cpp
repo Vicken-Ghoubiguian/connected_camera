@@ -3,7 +3,7 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 
-void capture(int mode)
+void exploits_function(int mode)
 {
     cv::VideoCapture cap;
     cv::Mat frame;
@@ -47,7 +47,7 @@ void capture(int mode)
 
 int main()
 {
-	capture(4);
+	exploits_function(4);
 
 	return 0;
 }
