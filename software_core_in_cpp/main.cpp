@@ -10,6 +10,7 @@
 
 using namespace cv;
 using namespace std;
+using namespace terminal_color_codes;
 
 void exploits_function()
 {
@@ -28,7 +29,7 @@ void exploits_function()
         return ;
     }
 
-    //
+    //We're entering an infinite loop...
     for(;;)
     {
         cap.read(frame);
@@ -36,47 +37,56 @@ void exploits_function()
 	//
 	pressed_key = waitKey(1);
 
+	//If 'ESC' is pressed...
         if(pressed_key == 27) {
 
             break;
 
         }
-        else if(pressed_key == 32) {
 
-            cout << "Pressed...\n";
-
-        }
-	else if((pressed_key >= 65 && pressed_key <= 90) || (pressed_key >= 97 && pressed_key <= 122)) {
+	//If any alphabetic key (lower or upper case) is pressed...
+	if((pressed_key >= 65 && pressed_key <= 90) || (pressed_key >= 97 && pressed_key <= 122))
+	{
 
 	    mode = pressed_key;
 
 	}
 
-	//
+	//If 'y' is pressed...
         if(mode == 121)
         {
 
-            cvtColor(frame, frame, COLOR_BGR2GRAY);
             Canny(frame, frame, 50, 150, 3);
 
         }
+	//If 'w' is pressed...
         else if(mode == 119)
         {
 
             cvtColor(frame, frame, COLOR_BGR2GRAY);
 
         }
-        else if(mode == 65)
+	//If 'i' is pressed...
+        else if(mode == 105)
         {
 
-            medianBlur(frame, frame, 65);
+            bitwise_not(frame, frame);
 
         }
+	//If 'h' is pressed...
+	else if(mode == 104)
+	{
+
+		cvtColor(frame, frame, COLOR_BGR2HSV);
+
+	}
+	//If 'o' is pressed...
 	else if(mode == 111)
 	{
 		frame = frame;
 	}
 
+	//Displaying the frame in a window...
         imshow("Connected camera", frame);
     }
 }

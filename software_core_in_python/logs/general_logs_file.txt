@@ -183,3 +183,10 @@
 [décembre 14, 2019 at 10:32]: Enable facial detection
 [décembre 14, 2019 at 10:32]: End of video shooting
 -------------------------------------
+-------------------------------------
+[décembre 16, 2019 at 12:33]: Activation of hue saturation lightness mode
+[décembre 16, 2019 at 12:33]: Activation of edge detection mode
+[décembre 16, 2019 at 12:33]: Activation of hue saturation lightness mode
+[décembre 16, 2019 at 12:33]: Activation of gray and white mode
+[décembre 16, 2019 at 12:33]: Activation of negative or inverted mode
+-------------------------------------
