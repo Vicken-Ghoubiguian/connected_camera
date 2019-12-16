@@ -1,10 +1,12 @@
-#include "opencv2/opencv.hpp"
+#include <opencv2/opencv.hpp>
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 
 #include <iostream>
 #include <stdio.h>
+
+#include "terminal_color_codes.h"
 
 using namespace cv;
 using namespace std;
@@ -72,7 +74,7 @@ void exploits_function()
         }
 	else if(mode == 111)
 	{
-
+		frame = frame;
 	}
 
         imshow("Connected camera", frame);
