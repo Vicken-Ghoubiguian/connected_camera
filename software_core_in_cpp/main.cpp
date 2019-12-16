@@ -12,13 +12,23 @@ using namespace cv;
 using namespace std;
 using namespace terminal_color_codes;
 
+void print_howto()
+{
+	cout << terminal_color_codes::Yellow + "Change mode \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Normal mode - press any keyboard key \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Draw mode - press 'p' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Painting mode - press 'c' \n" + terminal_color_codes::ResetAll;
+}
+
 void exploits_function()
 {
-    VideoCapture cap;
-    Mat frame;
-
     int pressed_key;
     int mode;
+
+    print_howto();
+
+    VideoCapture cap;
+    Mat frame;
 
     //Open the default camera
     cap.open(0);
