@@ -1,4 +1,4 @@
-#include "usefull_functions_library.h"
+#include "usefull_functions_library.hpp"
 #include "../terminal_color_codes.hpp"
 
 #include <iostream>
