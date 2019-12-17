@@ -53,7 +53,7 @@ void exploits_function()
     print_howto();
 
     VideoCapture cap;
-    Mat frame;
+    Mat frame, edge_detection_mode_frame;
 
     //Open the default camera
     cap.open(0);
@@ -91,7 +91,9 @@ void exploits_function()
         if(mode == 121)
         {
 
-            Canny(frame, frame, 50, 150);
+            Canny(frame, edge_detection_mode_frame, 50, 150);
+
+	    frame = edge_detection_mode_frame;
 
         }
 	//If 'w' is pressed...
