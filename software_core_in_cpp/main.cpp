@@ -6,7 +6,7 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "terminal_color_codes.h"
+#include "src/terminal_color_codes.h"
 
 using namespace cv;
 using namespace std;
@@ -91,7 +91,7 @@ void exploits_function()
         if(mode == 121)
         {
 
-            Canny(frame, frame, 50, 150, 3);
+            Canny(frame, frame, 50, 150);
 
         }
 	//If 'w' is pressed...
