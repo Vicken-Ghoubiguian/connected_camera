@@ -1,6 +1,6 @@
 #include "frame_mode_library.hpp"
 
-Mat negative_or_inverted_effect_function(Mat desired_frame)
+Mat frame_mode::negative_or_inverted_effect_function(Mat desired_frame)
 {
 	Mat result_frame;
 
@@ -9,7 +9,7 @@ Mat negative_or_inverted_effect_function(Mat desired_frame)
 	return result_frame;
 }
 
-Mat edge_detection_mode_function(Mat desired_frame)
+Mat frame_mode::edge_detection_mode_function(Mat desired_frame)
 {
 	Mat result_frame;
 

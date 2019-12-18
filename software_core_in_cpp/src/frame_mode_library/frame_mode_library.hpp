@@ -8,7 +8,10 @@
 
 using namespace cv;
 
-Mat negative_or_inverted_effect_function(Mat desired_frame);
-Mat edge_detection_mode_function(Mat desired_frame);
+namespace frame_mode
+{
+	Mat negative_or_inverted_effect_function(Mat desired_frame);
+	Mat edge_detection_mode_function(Mat desired_frame);
+}
 
 #endif
