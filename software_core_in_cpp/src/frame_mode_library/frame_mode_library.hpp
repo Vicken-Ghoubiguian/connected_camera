@@ -12,6 +12,8 @@ namespace frame_mode
 {
 	Mat negative_or_inverted_effect_function(Mat desired_frame);
 	Mat edge_detection_mode_function(Mat desired_frame);
+	Mat hue_saturation_lightness_effect_function(Mat desired_frame);
+	Mat gray_and_white_effect_function(Mat desired_frame);
 }
 
 #endif
