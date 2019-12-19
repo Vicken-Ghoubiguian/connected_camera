@@ -15,7 +15,7 @@ namespace frame_mode
 	Mat edge_detection_mode_function(Mat desired_frame);
 	Mat hue_saturation_lightness_effect_function(Mat desired_frame);
 	Mat gray_and_white_effect_function(Mat desired_frame);
-	Mat cartoonizing_image_function(Mat desired_frame);
+	Mat cartoonizing_image_function(Mat desired_frame, int ksize, bool sketch_mode);
 }
 
 #endif

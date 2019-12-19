@@ -36,7 +36,7 @@ Mat frame_mode::gray_and_white_effect_function(Mat desired_frame)
 	return result_frame;
 }
 
-Mat frame_mode::cartoonizing_image_function(Mat desired_frame)
+Mat frame_mode::cartoonizing_image_function(Mat desired_frame, int ksize, bool sketch_mode)
 {
 	Mat gray_frame, edge_frame, edge_preserving_frame, cartoonized_image;
 
@@ -47,7 +47,7 @@ Mat frame_mode::cartoonizing_image_function(Mat desired_frame)
     	GaussianBlur(gray_frame, gray_frame, Size(3, 3), 0);
 
     	//find edges
-    	Laplacian(gray_frame, edge_frame, -1, 5);
+    	Laplacian(gray_frame, edge_frame, -1, ksize);
     	convertScaleAbs(edge_frame, edge_frame);
 
     	//invert the image
@@ -55,6 +55,17 @@ Mat frame_mode::cartoonizing_image_function(Mat desired_frame)
 
     	//apply thresholding
     	threshold(edge_frame, edge_frame, 150, 255, THRESH_BINARY);
+
+	//
+	if(sketch_mode == true)
+	{
+
+		//
+		cvtColor(edge_frame, edge_frame, COLOR_GRAY2BGR);
+
+		//
+		return edge_frame;
+	}
 
     	//blur images heavily using edgePreservingFilter
     	edgePreservingFilter(desired_frame, edge_preserving_frame, 2, 50, 0.4);
