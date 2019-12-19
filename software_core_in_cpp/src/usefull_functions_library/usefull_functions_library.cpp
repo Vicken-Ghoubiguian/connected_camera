@@ -14,7 +14,8 @@ void usefull_functions::print_howto()
         cout << terminal_color_codes::Yellow + "* Normal mode - press any keyboard key \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Draw mode - press 'p' \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Painting mode - press 'c' \n" + terminal_color_codes::ResetAll;
-        cout << terminal_color_codes::Yellow + "* Black and white mode - press 'g' \n" + terminal_color_codes::ResetAll;
+        cout << terminal_color_codes::Yellow + "* Black and white mode with gray application mode - press 'g' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Black and white mode with RGB application mode - press 'a' \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Edge detection mode - press 'y' \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Hue saturation lightness mode - press 'h' \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Gray and white mode - press 'w' \n" + terminal_color_codes::ResetAll;
