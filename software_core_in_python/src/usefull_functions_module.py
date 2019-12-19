@@ -8,7 +8,8 @@ def print_howto():
 		* Normal mode - press any keyboard key
 		* Draw mode - press 'p'
 		* Painting mode - press 'c'
-		* Black and white mode - press 'g'
+		* Black and white with gray application mode - press 'g'
+		* Black and white with RGB application mode - press 'a'
 		* Edge detection mode - press 'y'
 		* Hue saturation lightness mode - press 'h'
 		* Gray and white mode - press 'w'

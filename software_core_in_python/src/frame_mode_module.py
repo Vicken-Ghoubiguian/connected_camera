@@ -44,11 +44,13 @@ def hue_saturation_lightness_effect_function(desired_frame):
 
 	return hue_saturation_lightness_frame
 
-def black_and_white_frame_converting_function(desired_frame):
+def black_and_white_frame_converting_function(desired_frame, is_gray_application_first):
 
-	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+	if is_gray_application_first == True:
 
-	ret, black_and_white_frame = cv2.threshold(grayed_frame, 127, 255, cv2.THRESH_BINARY)
+		desired_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	ret, black_and_white_frame = cv2.threshold(desired_frame, 127, 255, cv2.THRESH_BINARY)
 
 	return black_and_white_frame
 

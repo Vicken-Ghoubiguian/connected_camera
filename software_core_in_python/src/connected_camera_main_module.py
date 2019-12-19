@@ -96,7 +96,11 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 		elif is_current_mode == 'g':
 
-			frame = frame_mode_module.black_and_white_frame_converting_function(frame)
+			frame = frame_mode_module.black_and_white_frame_converting_function(frame, True)
+
+		elif is_current_mode == 'a':
+
+			frame = frame_mode_module.black_and_white_frame_converting_function(frame, False)
 
 		elif is_current_mode == 'v':
 
@@ -222,13 +226,23 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				is_current_mode = 'y'
 
+		elif c == ord('a'):
+
+			if is_current_mode != 'a':
+
+				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of black and white with RGB application mode")
+
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of black and white with RGB application mode\n")
+
+				is_current_mode = 'a'
+
 		elif c == ord('g'):
 
 			if is_current_mode != 'g':
 
-				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of black and white mode")
+				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of black and white with gray application mode")
 
-				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of black and white mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of black and white with gray application mode\n")
 
 				is_current_mode = 'g'
 
