@@ -36,7 +36,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 	output_video_file = None
 
-	usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', '-------------------------------------\n')
+	usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', '-------------------------------------\n')
 
 	while True:
 
@@ -128,23 +128,23 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.Yellow, "[" + today_as_string + "]: End of video shooting")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
 
 			break
 
 		if c == ord('1'):
 
-			photography_management_module.shoot_a_photo_function('output_media_files/photos/' + output_photo_name, output_photo_format, frame)
+			photography_management_module.shoot_a_photo_function('../repository_common_files/output_media_files/photos/' + output_photo_name, output_photo_format, frame)
 
 			usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.DarkGray, "[" + today_as_string + "]: Photo shooted")
 
-			usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Photo shooted\n")
+			usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Photo shooted\n")
 
 		elif c == ord('2'):
 
 			if is_shoting_video == False:
 
-				output_video_file = videoWriter_module.initialisation_of_videoWriter_function('output_media_files/videos/' + output_video_name, output_video_format)
+				output_video_file = videoWriter_module.initialisation_of_videoWriter_function('../repository_common_files/output_media_files/videos/' + output_video_name, output_video_format)
 
 				if output_video_file != None:
 
@@ -152,13 +152,13 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 					usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.Yellow, "[" + today_as_string + "]: Beginning of video shooting")
 
-					usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Beginning of video shooting\n")
+					usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Beginning of video shooting\n")
 
 				else:
 
 					usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.Red, "[" + today_as_string + "]: Video doesn't shooting")
 
-					usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Video doesn't shooting\n")
+					usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Video doesn't shooting\n")
 
 			else:
 
@@ -170,7 +170,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.Yellow, "[" + today_as_string + "]: End of video shooting")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
 
 		elif c == ord('p'):
 
@@ -178,7 +178,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of printed mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of printed mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of printed mode\n")
 
 				is_current_mode = 'p'
 
@@ -188,7 +188,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundRed, "[" + today_as_string + "]: Activation of negative or inverted mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of negative or inverted mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of negative or inverted mode\n")
 
 				is_current_mode = 'i'
 
@@ -198,7 +198,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
                                 usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundCyan, "[" + today_as_string + "]: Activation of gray and white mode")
 
-                                usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of gray and white mode\n")
+                                usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of gray and white mode\n")
 
                                 is_current_mode = 'w'
 
@@ -208,7 +208,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
                                 usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundCyan, "[" + today_as_string + "]: Activation of hue saturation lightness mode")
 
-                                usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of hue saturation lightness mode\n")
+                                usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of hue saturation lightness mode\n")
 
                                 is_current_mode = 'h'
 
@@ -218,7 +218,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of edge detection mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of edge detection mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of edge detection mode\n")
 
 				is_current_mode = 'y'
 
@@ -228,7 +228,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of black and white mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of black and white mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of black and white mode\n")
 
 				is_current_mode = 'g'
 
@@ -238,7 +238,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of vintage mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of vintage mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of vintage mode\n")
 
 				is_current_mode = 'v'
 
@@ -248,7 +248,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of cartoonized mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of cartoonized mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of cartoonized mode\n")
 
 				is_current_mode = 'c'
 
@@ -258,7 +258,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundGreen, "[" + today_as_string + "]: Activation of ordinary mode")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of ordinary mode\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of ordinary mode\n")
 
 				is_current_mode = 'o'
 
@@ -270,7 +270,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightGreen, "[" + today_as_string + "]: Disable facial detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable facial detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable facial detection\n")
 
 			else:
 
@@ -278,7 +278,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightGreen, "[" + today_as_string + "]: Enable facial detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable facial detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable facial detection\n")
 
 		elif c == ord('s'):
 
@@ -288,7 +288,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightMagenta, "[" + today_as_string + "]: Disable smile detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable smile detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable smile detection\n")
 
 			else:
 
@@ -296,7 +296,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightMagenta, "[" + today_as_string + "]: Enable smile detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable smile detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable smile detection\n")
 
 		elif c == ord('d'):
 
@@ -306,7 +306,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightMagenta, "[" + today_as_string + "]: Disable profile face detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable profile face detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable profile face detection\n")
 
 			else:
 
@@ -314,7 +314,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightMagenta, "[" + today_as_string + "]: Enable profile face detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable profile face detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable profile face detection\n")
 
 		elif c == ord('e'):
 
@@ -322,7 +322,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				is_activated_eye_detection = False
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable eyes detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable eyes detection\n")
 
 			else:
 
@@ -330,7 +330,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightBlue, "[" + today_as_string + "]: Enable eyes detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable eyes detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable eyes detection\n")
 
 		elif c == ord('t'):
 
@@ -340,7 +340,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightBlue, "[" + today_as_string + "]: Disable tree eye glasses detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable tree eye glasses detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable tree eye glasses detection\n")
 
 			else:
 
@@ -348,7 +348,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightBlue, "[" + today_as_string + "]: Enable tree eye glasses detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable tree eye glasses detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable tree eye glasses detection\n")
 
 		elif c == ord('m'):
 
@@ -358,7 +358,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightCyan, "[" + today_as_string + "]: Disable mouth detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable mouth detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable mouth detection\n")
 
 			else:
 
@@ -366,7 +366,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.LightCyan, "[" + today_as_string + "]: Enable mouth detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable mouth detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable mouth detection\n")
 
 		elif c == ord('n'):
 
@@ -376,7 +376,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.White, "[" + today_as_string + "]: Disable nose detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable nose detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable nose detection\n")
 
 			else:
 
@@ -384,7 +384,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.White, "[" + today_as_string + "]: Enable nose detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable nose detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable nose detection\n")
 
 		elif c == ord('l'):
 
@@ -394,7 +394,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.DarkGray, "[" + today_as_string + "]: Disable left ear detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable left ear detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable left ear detection\n")
 
 			else:
 
@@ -402,7 +402,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.DarkGray, "[" + today_as_string + "]: Enable left ear detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable left ear detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable left ear detection\n")
 
 		elif c == ord('r'):
 
@@ -412,7 +412,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.DarkGray, "[" + today_as_string + "]: Disable right ear detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Disable right ear detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Disable right ear detection\n")
 
 			else:
 
@@ -420,7 +420,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.DarkGray, "[" + today_as_string + "]: Enable right ear detection")
 
-				usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', "[" + today_as_string + "]: Enable right ear detection\n")
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Enable right ear detection\n")
 
 		if is_shoting_video == True:
 
@@ -430,6 +430,6 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 	cap.release()
 
-	usefull_functions_module.writing_in_log_files_function('logs/general_logs_file.txt', '-------------------------------------\n')
+	usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', '-------------------------------------\n')
 
 	cv2.destroyAllWindows()

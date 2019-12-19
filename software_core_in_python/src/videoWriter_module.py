@@ -2,7 +2,7 @@ import cv2
 import src.connected_camera_s_database_module as database_module
 from pygame import mixer
 
-def initialisation_of_videoWriter_function(desired_title, desired_format, desired_audio_file = 'sounds/16_seconds_old_video_projector_sound.mp3'):
+def initialisation_of_videoWriter_function(desired_title, desired_format, desired_audio_file = '../repository_common_files/sounds/16_seconds_old_video_projector_sound.mp3'):
 
 	mixer.init()
 

@@ -3,9 +3,9 @@ import numpy as np
 
 def eye_tree_eyeglasses_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 
-	face_cascade =  cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_default.xml')
+	face_cascade =  cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_frontalface_default.xml')
 
-	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye_tree_eyeglasses.xml')
+	eye_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_eye_tree_eyeglasses.xml')
 
 	if face_cascade.empty():
 
@@ -31,7 +31,7 @@ def eye_tree_eyeglasses_detection_application_function(desired_frame, scaleFacto
 
 def nose_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 
-	nose_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_nose.xml')
+	nose_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_mcs_nose.xml')
 
 	if nose_cascade.empty():
 
@@ -49,7 +49,7 @@ def nose_detection_application_function(desired_frame, scaleFactor = 1.3, minNei
 
 def right_ear_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 
-	right_ear_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_rightear.xml')
+	right_ear_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_mcs_rightear.xml')
 
 	if right_ear_cascade.empty():
 
@@ -67,7 +67,7 @@ def right_ear_detection_application_function(desired_frame, scaleFactor = 1.3, m
 
 def left_ear_detection_application_function(desired_frame, scaleFactor = 1.3, minNeighbors = 1):
 
-	left_ear_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_leftear.xml')
+	left_ear_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_mcs_leftear.xml')
 
 	if left_ear_cascade.empty():
 
@@ -85,7 +85,7 @@ def left_ear_detection_application_function(desired_frame, scaleFactor = 1.3, mi
 
 def profile_facial_detection_application_function(desired_frame, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
 
-        face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_profileface.xml')
+        face_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_profileface.xml')
 
         if face_cascade.empty():
 
@@ -101,7 +101,7 @@ def profile_facial_detection_application_function(desired_frame, scale_factor = 
 
 def frontal_facial_detection_application_function(desired_frame, scale_factor = 0.5, scaleFactor = 1.3, minNeighbors = 1):
 
-	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
+	face_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_frontalface_alt.xml')
 
 	if face_cascade.empty():
 
@@ -117,9 +117,9 @@ def frontal_facial_detection_application_function(desired_frame, scale_factor = 
 
 def smile_detection_application_function(desired_frame):
 
-	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_alt.xml')
+	face_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_frontalface_alt.xml')
 
-	smile_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_smile.xml')
+	smile_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_smile.xml')
 
 	if face_cascade.empty():
 
@@ -145,7 +145,7 @@ def smile_detection_application_function(desired_frame):
 
 def mouth_detection_application_function(desired_frame):
 
-	mouth_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_mcs_mouth.xml')
+	mouth_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_mcs_mouth.xml')
 
 	if mouth_cascade.empty():
 
@@ -163,9 +163,9 @@ def mouth_detection_application_function(desired_frame):
 
 def eye_detection_application_function(desired_frame):
 
-	eye_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_eye.xml')
+	eye_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_eye.xml')
 
-	face_cascade = cv2.CascadeClassifier('haarcascade_files/haarcascade_frontalface_default.xml')
+	face_cascade = cv2.CascadeClassifier('../repository_common_files/haarcascade_files/haarcascade_frontalface_default.xml')
 
 	if face_cascade.empty():
 

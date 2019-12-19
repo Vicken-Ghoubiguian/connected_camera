@@ -190,3 +190,12 @@
 [décembre 16, 2019 at 12:33]: Activation of gray and white mode
 [décembre 16, 2019 at 12:33]: Activation of negative or inverted mode
 -------------------------------------
+-------------------------------------
+[décembre 19, 2019 at 08:02]: Enable facial detection
+[décembre 19, 2019 at 08:02]: Activation of edge detection mode
+[décembre 19, 2019 at 08:02]: Photo shooted
+-------------------------------------
+-------------------------------------
+[décembre 19, 2019 at 08:12]: Enable facial detection
+[décembre 19, 2019 at 08:12]: Enable eyes detection
+-------------------------------------
