@@ -31,7 +31,16 @@ Mat frame_mode::gray_and_white_effect_function(Mat desired_frame)
 {
 	Mat result_frame;
 
-	cvtColor(desired_frame, result_frame, COLOR_BGR2HSV);
+	cvtColor(desired_frame, result_frame, COLOR_BGR2GRAY);
+
+	return result_frame;
+}
+
+Mat frame_mode::black_and_white_frame_converting_function(Mat desired_frame)
+{
+	Mat result_frame;
+
+	threshold(desired_frame, result_frame, 150, 255, THRESH_BINARY);
 
 	return result_frame;
 }
