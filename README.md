@@ -20,4 +20,4 @@ To use the cpp software core in the current project or to test it, follow this c
 
 * cd connected_camera/software_core_in_cpp
 
-* g++ -I /usr/local/include -L/usr/local/lib/ main.cpp src/'(asterisk)'/'(asterisk)' -o main -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs -lopencv_videoio -lopencv_calib3d
+* g++ -I /usr/local/include -L/usr/local/lib/ main.cpp src/'(asterisk)'/'(asterisk)' -o main -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs -lopencv_videoio -lopencv_calib3d -lopencv_photo
