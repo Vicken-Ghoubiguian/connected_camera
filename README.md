@@ -2,15 +2,15 @@ This is a connected camera project.
 
 This connected camera has the following features:
 
-* can take photos,
+1. can take photos,
 
-* can shoot videos,
+1. can shoot videos,
 
-* can add decorations to take the photo or shoot the video,
+1. can add decorations to take the photo or shoot the video,
 
-* can modify mode among the following: normal, cartoonized without colors, cartoonized with colors,
+1. can modify mode among the following: normal, cartoonized without colors, cartoonized with colors,
 
-* can share videos or photos on different social networks (Facebook, Twitter, LinkedIn, YouTube and Instagram).
+1. can share videos or photos on different social networks (Facebook, Twitter, LinkedIn, YouTube and Instagram).
 
 This camera can take photos in this format: `'.jpg'`, `'.jpeg'`, `'.jpe'`, `'.jp2'`, `'.png'`, `'.tiff'`, `'.tif'`, `'.bmp'`, `'.dib'`, `'.pbm'`, `'.pgm'`, `'.ppm'`.
 
