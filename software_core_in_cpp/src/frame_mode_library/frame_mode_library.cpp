@@ -40,6 +40,8 @@ Mat frame_mode::black_and_white_frame_converting_function(Mat desired_frame, enu
 {
 	Mat result_frame;
 
+	cvtColor(desired_frame, desired_frame, color_conversion_code);
+
 	threshold(desired_frame, result_frame, 150, 255, THRESH_BINARY);
 
 	return result_frame;
