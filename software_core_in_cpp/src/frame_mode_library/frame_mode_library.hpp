@@ -6,6 +6,7 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/photo.hpp>
+#include <opencv2/imgproc.hpp>
 
 using namespace cv;
 
@@ -16,7 +17,7 @@ namespace frame_mode
 	Mat hue_saturation_lightness_effect_function(Mat desired_frame);
 	Mat gray_and_white_effect_function(Mat desired_frame);
 	Mat cartoonizing_image_function(Mat desired_frame, int ksize, bool sketch_mode);
-	Mat black_and_white_frame_converting_function(Mat desired_frame, int color_code);
+	Mat black_and_white_frame_converting_function(Mat desired_frame, enum ColorConversionCodes color__conversion_code);
 }
 
 #endif

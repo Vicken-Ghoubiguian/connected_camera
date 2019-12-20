@@ -100,7 +100,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 		elif is_current_mode == 'a':
 
-			frame = frame_mode_module.black_and_white_frame_converting_function(frame, None)
+			frame = frame_mode_module.black_and_white_frame_converting_function(frame, cv2.COLOR_BGR2BGRA)
 
 		elif is_current_mode == 'v':
 
