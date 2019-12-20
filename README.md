@@ -18,6 +18,10 @@ This camera can record videos in this format: '.avi', '.mp4'.
 
 To use the cpp software core in the current project or to test it, follow this commands:
 
+<div class = "panel panel-gitlab-orange">
+
 * cd connected_camera/software_core_in_cpp
+{: .alert .alert-gitlab-orange}
 
 * g++ -I /usr/local/include -L/usr/local/lib/ main.cpp src/'(asterisk)'/'(asterisk)' -o main -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs -lopencv_videoio -lopencv_calib3d -lopencv_photo
+{: .alert .alert-gitlab-orange}
