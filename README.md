@@ -21,3 +21,5 @@ To use the cpp software core in the current project or to test it, follow this c
 1. `cd connected_camera/software_core_in_cpp`
 
 1. `g++ -o main main.cpp src/*/* graphic_interface/*/* `pkg-config --cflags --libs gtkmm-3.0 opencv``
+
+To learn more about gtkmm (official C++ interface for the popular GUI library GTK+): https://www.lucidarme.me/gtkmm-exemple-de-tutoriel/
