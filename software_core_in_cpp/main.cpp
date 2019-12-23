@@ -3,7 +3,7 @@
 
 int main(int argc, char** argv)
 {
-	exploits_function();
+	exploits_on_gtk_function(argc, argv);
 
 	return 0;
 }
