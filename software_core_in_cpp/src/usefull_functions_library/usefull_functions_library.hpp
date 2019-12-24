@@ -3,7 +3,7 @@
 
 namespace usefull_functions
 {
-	void print_howto();
+	void print_howto_in_konsole();
 }
 
 #endif

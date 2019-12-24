@@ -7,7 +7,7 @@
 using namespace std;
 using namespace terminal_color_codes;
 
-void usefull_functions::print_howto()
+void usefull_functions::print_howto_in_konsole()
 {
         cout << "\n";
         cout << terminal_color_codes::Yellow + "Change mode: \n" + terminal_color_codes::ResetAll;
