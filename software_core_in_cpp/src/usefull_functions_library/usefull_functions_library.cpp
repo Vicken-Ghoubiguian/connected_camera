@@ -7,6 +7,43 @@
 using namespace std;
 using namespace terminal_color_codes;
 
+std::string usefull_functions::print_howto_in_window()
+{
+	std::string print_howto_string;
+
+	print_howto_string = "\n";
+	print_howto_string = print_howto_string + "* Normal mode - press any keyboard key \n";
+	print_howto_string = print_howto_string + "* Draw mode - press 'p' \n";
+	print_howto_string = print_howto_string + "* Painting mode - press 'c' \n";
+	print_howto_string = print_howto_string + "* Black and white mode with gray application mode - press 'g' \n";
+	print_howto_string = print_howto_string + "* Black and white mode with RGB application mode - press 'a' \n";
+	print_howto_string = print_howto_string + "* Edge detection mode - press 'y' \n";
+	print_howto_string = print_howto_string + "* Hue saturation lightness mode - press 'h' \n";
+	print_howto_string = print_howto_string + "* Gray and white mode - press 'w' \n";
+	print_howto_string = print_howto_string + "* Negative or inverted mode - press 'i' \n";
+	print_howto_string = print_howto_string + "\n";
+	print_howto_string = print_howto_string + "Activate body parts detection: \n";
+	print_howto_string = print_howto_string + "* Activating face detection - press 'f' \n";
+	print_howto_string = print_howto_string + "* Activating profile face detection - press 'd' \n";
+	print_howto_string = print_howto_string + "* Activating eye detection - press 'e' \n";
+	print_howto_string = print_howto_string + "* Activating tree eye glasses - press 't' \n";
+	print_howto_string = print_howto_string + "* Activating smile detection - press 's' \n";
+	print_howto_string = print_howto_string + "* Activating mouth detection - press 'm' \n";
+	print_howto_string = print_howto_string + "* Activating nose detection - press 'n' \n";
+	print_howto_string = print_howto_string + "* Activating right ear detection - press 'r' \n";
+	print_howto_string = print_howto_string + "* Activating left ear detection - press 'l' \n";
+	print_howto_string = print_howto_string + "\n";
+	print_howto_string = print_howto_string + "Multimedia features: \n";
+	print_howto_string = print_howto_string + "* Shoot a photo regardless of the mode - press '1' \n";
+	print_howto_string = print_howto_string + "* Start/Stop shooting video - press '2' \n";
+	print_howto_string = print_howto_string + "\n";
+	print_howto_string = print_howto_string + "To leave or to quit: \n";
+	print_howto_string = print_howto_string + "* To leave or to quit the connected camera - press 'Esc' \n";
+	print_howto_string = print_howto_string + "\n";
+
+	return print_howto_string;
+}
+
 void usefull_functions::print_howto_in_konsole()
 {
         cout << "\n";
