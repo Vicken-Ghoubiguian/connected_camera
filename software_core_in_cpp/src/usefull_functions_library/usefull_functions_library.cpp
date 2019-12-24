@@ -12,6 +12,7 @@ std::string usefull_functions::print_howto_in_window()
 	std::string print_howto_string;
 
 	print_howto_string = "\n";
+	print_howto_string = print_howto_string + "Change mode: \n";
 	print_howto_string = print_howto_string + "* Normal mode - press any keyboard key \n";
 	print_howto_string = print_howto_string + "* Draw mode - press 'p' \n";
 	print_howto_string = print_howto_string + "* Painting mode - press 'c' \n";
