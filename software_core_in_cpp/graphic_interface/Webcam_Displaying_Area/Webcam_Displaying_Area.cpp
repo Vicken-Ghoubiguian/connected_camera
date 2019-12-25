@@ -20,6 +20,16 @@ Webcam_Displaying_Area::~Webcam_Displaying_Area()
 
 }
 
+connected_camera_mode Webcam_Displaying_Area::getCurrent_mode()
+{
+	return current_mode;
+}
+
+void Webcam_Displaying_Area::setCurrent_mode(connected_camera_mode new_current_mode)
+{
+	current_mode = new_current_mode;
+}
+
 bool Webcam_Displaying_Area::on_timeout()
 {
 	Glib::RefPtr<Gdk::Window> win = get_window();
