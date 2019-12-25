@@ -6,9 +6,11 @@
 #include <opencv2/opencv.hpp>
 
 #include "../../src/connected_camera_mode.hpp"
+#include "../../src/frame_mode_library/frame_mode_library.hpp"
 
 using namespace Gtk;
 using namespace cv;
+using namespace frame_mode;
 
 class Webcam_Displaying_Area : public DrawingArea
 {

@@ -6,6 +6,8 @@
 
 Webcam_Displaying_Area::Webcam_Displaying_Area() : cv_opened(false)
 {
+	current_mode = CC_ORDINARY_MODE;
+
 	cv_cap.open(0);
 
 	if (cv_cap.isOpened() == true)
@@ -58,7 +60,14 @@ bool Webcam_Displaying_Area::on_draw(const Cairo::RefPtr<Cairo::Context> &cr)
 		return false;
 	}
 
-	cvtColor (cv_frame, cv_frame1, CV_BGR2RGB);
+	if(current_mode == CC_BLACK_AND_WHITE_WITH_RGB_MODE)
+	{
+		cv_frame1 = black_and_white_frame_converting_function(cv_frame, COLOR_BGR2BGRA);
+	}
+	else
+	{
+		cvtColor(cv_frame, cv_frame1, CV_BGR2RGB);
+	}
 
 	Gdk::Cairo::set_source_pixbuf (cr, Gdk::Pixbuf::create_from_data(cv_frame1.data, Gdk::COLORSPACE_RGB, false, 8, cv_frame1.cols, cv_frame1.rows, cv_frame1.step));
 
