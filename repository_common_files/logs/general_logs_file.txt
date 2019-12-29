@@ -244,8 +244,4 @@
 [décembre 20, 2019 at 07:30]: Activation of black and white with gray application mode
 -------------------------------------
 -------------------------------------
-[décembre 20, 2019 at 07:36]: Activation of black and white with RGB application mode
--------------------------------------
--------------------------------------
-[décembre 20, 2019 at 07:39]: Activation of black and white with RGB application mode
 -------------------------------------
