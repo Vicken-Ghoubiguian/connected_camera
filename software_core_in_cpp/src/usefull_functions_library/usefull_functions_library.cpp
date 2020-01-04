@@ -12,7 +12,56 @@ std::map<std::string, std::string> usefull_functions::color_codes_map_initialisa
 	std::map<std::string, std::string> current_color_codes_map;
 
 	current_color_codes_map["ResetAll"] = terminal_color_codes::ResetAll;
+
+	current_color_codes_map["Bold"] = terminal_color_codes::Bold;
+	current_color_codes_map["Dim"] = terminal_color_codes::Dim;
+	current_color_codes_map["Underlined"] = terminal_color_codes::Underlined;
+	current_color_codes_map["Blink"] = terminal_color_codes::Blink;
+	current_color_codes_map["Reverse"] = terminal_color_codes::Reverse;
+	current_color_codes_map["Hidden"] = terminal_color_codes::Hidden;
+
+	current_color_codes_map["ResetBold"] = terminal_color_codes::ResetBold;
+	current_color_codes_map["ResetDim"] = terminal_color_codes::ResetDim;
+	current_color_codes_map["ResetUnderlined"] = terminal_color_codes::ResetUnderlined;
+	current_color_codes_map["ResetBlink"] = terminal_color_codes::ResetBlink;
+	current_color_codes_map["ResetReverse"] = terminal_color_codes::ResetReverse;
+	current_color_codes_map["ResetHidden"] = terminal_color_codes::ResetHidden;
+
+	current_color_codes_map["Default"] = terminal_color_codes::Default;
+	current_color_codes_map["Black"] = terminal_color_codes::Black;
 	current_color_codes_map["Red"] = terminal_color_codes::Red;
+	current_color_codes_map["Green"] = terminal_color_codes::Green;
+	current_color_codes_map["Yellow"] = terminal_color_codes::Yellow;
+	current_color_codes_map["Blue"] = terminal_color_codes::Blue;
+	current_color_codes_map["Magenta"] = terminal_color_codes::Magenta;
+	current_color_codes_map["Cyan"] = terminal_color_codes::Cyan;
+	current_color_codes_map["LightGray"] = terminal_color_codes::LightGray;
+	current_color_codes_map["DarkGray"] = terminal_color_codes::DarkGray;
+	current_color_codes_map["LightRed"] = terminal_color_codes::LightRed;
+	current_color_codes_map["LightGreen"] = terminal_color_codes::LightGreen;
+	current_color_codes_map["LightYellow"] = terminal_color_codes::LightYellow;
+	current_color_codes_map["LightBlue"] = terminal_color_codes::LightBlue;
+	current_color_codes_map["LightMagenta"] = terminal_color_codes::LightMagenta;
+	current_color_codes_map["LightCyan"] = terminal_color_codes::LightCyan;
+	current_color_codes_map["White"] = terminal_color_codes::White;
+
+	current_color_codes_map["BackgroundDefault"] = terminal_color_codes::BackgroundDefault;
+	current_color_codes_map["BackgroundBlack"] = terminal_color_codes::BackgroundBlack;
+	current_color_codes_map["BackgroundRed"] = terminal_color_codes::BackgroundRed;
+	current_color_codes_map["BackgroundGreen"] = terminal_color_codes::BackgroundGreen;
+	current_color_codes_map["BackgroundYellow"] = terminal_color_codes::BackgroundYellow;
+	current_color_codes_map["BackgroundBlue"] = terminal_color_codes::BackgroundBlue;
+	current_color_codes_map["BackgroundMagenta"] = terminal_color_codes::BackgroundMagenta;
+	current_color_codes_map["BackgroundCyan"] = terminal_color_codes::BackgroundCyan;
+	current_color_codes_map["BackgroundLightGray"] = terminal_color_codes::BackgroundLightGray;
+	current_color_codes_map["BackgroundDarkGray"] = terminal_color_codes::BackgroundDarkGray;
+	current_color_codes_map["BackgroundLightRed"] = terminal_color_codes::BackgroundLightRed;
+	current_color_codes_map["BackgroundLightGreen"] = terminal_color_codes::BackgroundLightGreen;
+	current_color_codes_map["BackgroundLightYellow"] = terminal_color_codes::BackgroundLightYellow;
+	current_color_codes_map["BackgroundLightBlue"] = terminal_color_codes::BackgroundLightBlue;
+	current_color_codes_map["BackgroundLightMagenta"] = terminal_color_codes::BackgroundLightMagenta;
+	current_color_codes_map["BackgroundLightCyan"] = terminal_color_codes::BackgroundLightCyan;
+	current_color_codes_map["BackgroundWhite"] = terminal_color_codes::BackgroundWhite;
 
 	return current_color_codes_map;
 }
