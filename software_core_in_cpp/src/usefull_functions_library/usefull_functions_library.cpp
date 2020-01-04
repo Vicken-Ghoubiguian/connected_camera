@@ -7,6 +7,16 @@
 using namespace std;
 using namespace terminal_color_codes;
 
+std::map<std::string, std::string> usefull_functions::color_codes_map_initialisation_function()
+{
+	std::map<std::string, std::string> current_color_codes_map;
+
+	current_color_codes_map["ResetAll"] = terminal_color_codes::ResetAll;
+	current_color_codes_map["Red"] = terminal_color_codes::Red;
+
+	return current_color_codes_map;
+}
+
 std::string usefull_functions::print_howto_in_window()
 {
 	std::string print_howto_string;
