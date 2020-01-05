@@ -140,5 +140,5 @@ void usefull_functions::print_howto_in_konsole()
 
 void usefull_functions::writting_in_console_function(std::string desired_terminal_color_code, std::string desired_log_to_write)
 {
-	cout << desired_terminal_color_code + desired_log_to_write + terminal_color_codes::ResetAll;
+	cout << desired_terminal_color_code + desired_log_to_write + terminal_color_codes::ResetAll << std::endl;
 }
