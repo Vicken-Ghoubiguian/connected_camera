@@ -142,3 +142,10 @@ void usefull_functions::writting_in_console_function(std::string desired_termina
 {
 	cout << desired_terminal_color_code + desired_log_to_write + terminal_color_codes::ResetAll << std::endl;
 }
+
+std::string usefull_functions::today_as_string_returning_function()
+{
+	auto time_now_as_timestamp = chrono::system_clock::to_time_t(chrono::system_clock::now());
+
+	return ctime(&time_now_as_timestamp);
+}
