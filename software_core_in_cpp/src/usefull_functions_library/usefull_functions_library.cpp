@@ -145,7 +145,17 @@ void usefull_functions::writting_in_console_function(std::string desired_termina
 
 std::string usefull_functions::today_as_string_returning_function()
 {
-	time_t time_now_as_timestamp = chrono::system_clock::to_time_t(chrono::system_clock::now());
+	char buffer_to_stock_current_time[26];
 
-	return ctime(&time_now_as_timestamp);
+	std::string time_now_as_string;
+
+	time_t time_now_as_timestamp = time(NULL);
+
+	struct tm *time_now_as_struct_tm = localtime(&time_now_as_timestamp);
+
+	strftime(buffer_to_stock_current_time, 26, "%B %d, %Y at %k:%M", time_now_as_struct_tm);
+
+	time_now_as_string.assign(buffer_to_stock_current_time, 26);
+
+	return time_now_as_string;
 }
