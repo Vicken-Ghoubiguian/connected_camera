@@ -118,6 +118,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			frame = frame_mode_module.gray_and_white_effect_function(frame)
 
+		elif is_current_mode == 'b':
+
+			frame = frame_mode_module.colormap_effect_application_function(frame, cv2.COLORMAP_WINTER);
+
 		else:
 
 			frame = frame
@@ -205,6 +209,12 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
                                 usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of gray and white mode\n")
 
                                 is_current_mode = 'w'
+
+		elif c == ord('b'):
+
+			if is_current_mode != 'b':
+
+				is_current_mode = 'b'
 
 		elif c == ord('h'):
 
