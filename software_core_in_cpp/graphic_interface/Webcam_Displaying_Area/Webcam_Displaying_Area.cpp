@@ -96,6 +96,10 @@ bool Webcam_Displaying_Area::on_draw(const Cairo::RefPtr<Cairo::Context> &cr)
 	{
 		cv_frame1 = edge_detection_mode_function(cv_frame);
 	}
+	else if(current_mode == CC_COLORMAP_WINTER_MODE)
+	{
+		cv_frame1 = colormap_effect_application_function(cv_frame, COLORMAP_WINTER);
+	}
 	else
 	{
 		cvtColor(cv_frame, cv_frame1, CV_BGR2RGB);
