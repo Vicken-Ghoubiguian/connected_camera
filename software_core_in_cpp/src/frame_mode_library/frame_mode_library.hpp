@@ -18,6 +18,7 @@ namespace frame_mode
 	Mat gray_and_white_effect_function(Mat desired_frame);
 	Mat cartoonizing_image_function(Mat desired_frame, int ksize, bool sketch_mode);
 	Mat black_and_white_frame_converting_function(Mat desired_frame, enum ColorConversionCodes color_conversion_code);
+	Mat colormap_effect_application_function(Mat desired_frame, enum ColormapTypes chosen_colormap);
 }
 
 #endif

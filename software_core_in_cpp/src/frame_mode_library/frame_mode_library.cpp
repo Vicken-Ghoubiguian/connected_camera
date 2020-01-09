@@ -1,5 +1,16 @@
 #include "frame_mode_library.hpp"
 
+Mat frame_mode::colormap_effect_application_function(Mat desired_frame, enum ColormapTypes chosen_colormap)
+{
+	Mat result_frame, grayed_frame;
+
+	cvtColor(desired_frame, grayed_frame, COLOR_BGR2GRAY);
+
+	applyColorMap(grayed_frame, result_frame, chosen_colormap);
+
+	return result_frame;
+}
+
 Mat frame_mode::negative_or_inverted_effect_function(Mat desired_frame)
 {
 	Mat result_frame;
