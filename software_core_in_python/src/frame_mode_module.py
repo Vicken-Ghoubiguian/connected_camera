@@ -1,6 +1,14 @@
 import cv2
 import numpy as np
 
+def colormap_effect_application_function(desired_frame, chosen_colormap):
+
+	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)
+
+	colormap_effect_application_frame = cv2.applyColorMap(grayed_frame, chosen_colormap)
+
+	return colormap_effect_application_frame
+
 def negative_or_inverted_effect_function(desired_frame):
 
 	frame_with_negative_or_inverted_effect = cv2.bitwise_not(desired_frame)
