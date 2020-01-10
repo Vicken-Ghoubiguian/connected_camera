@@ -3,8 +3,8 @@
 
 int main(int argc, char** argv)
 {
-	exploits_on_gtk_function(argc, argv);
-	//exploits_function();
+	//exploits_on_gtk_function(argc, argv);
+	exploits_function();
 
 	return 0;
 }
