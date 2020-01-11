@@ -117,6 +117,12 @@ void usefull_functions::print_howto_in_konsole()
         cout << terminal_color_codes::Yellow + "* Hue saturation lightness mode - press 'h' \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Gray and white mode - press 'w' \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Negative or inverted mode - press 'i' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Color winter effect mode - press 'b' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap rainbow effect mode - press 'j' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap hot effect mode - press 'v' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap parula effect mode - press 'x' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap spring effect mode - press 'z' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap ocean effect mode - press 'q' \n" + terminal_color_codes::ResetAll;
         cout << "\n";
         cout << terminal_color_codes::Yellow + "Activate body parts detection: \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Activating face detection - press 'f' \n" + terminal_color_codes::ResetAll;
