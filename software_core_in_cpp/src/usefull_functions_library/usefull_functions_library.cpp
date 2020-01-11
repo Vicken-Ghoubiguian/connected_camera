@@ -123,6 +123,7 @@ void usefull_functions::print_howto_in_konsole()
 	cout << terminal_color_codes::Yellow + "* Colormap parula effect mode - press 'x' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Colormap spring effect mode - press 'z' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Colormap ocean effect mode - press 'q' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap jet effect mode - press 'k' \n" + terminal_color_codes::ResetAll;
         cout << "\n";
         cout << terminal_color_codes::Yellow + "Activate body parts detection: \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Activating face detection - press 'f' \n" + terminal_color_codes::ResetAll;
