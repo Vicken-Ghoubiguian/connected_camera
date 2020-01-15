@@ -1,5 +1,14 @@
 #include "frame_mode_library.hpp"
 
+Mat frame_mode::stylization_effect_application_function(Mat desired_frame, float sigma_s, float sigma_r)
+{
+	Mat result_frame;
+
+	stylization(desired_frame, result_frame, sigma_s, sigma_r);
+
+	return result_frame;
+}
+
 Mat frame_mode::pencil_effect_application_function(Mat desired_frame, bool output_indicator, float sigma_s, float sigma_r, float shade_factor)
 {
 	Mat result_frame, result_frame_bis;
