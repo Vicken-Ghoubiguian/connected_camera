@@ -1,5 +1,21 @@
 #include "frame_mode_library.hpp"
 
+Mat frame_mode::pencil_effect_application_function(Mat desired_frame, bool output_indicator, float sigma_s, float sigma_r, float shade_factor)
+{
+	Mat result_frame, result_frame_bis;
+
+	if(output_indicator == true)
+	{
+		pencilSketch(desired_frame, result_frame, result_frame_bis, sigma_s, sigma_r, shade_factor);
+	}
+	else
+	{
+		pencilSketch(desired_frame, result_frame_bis, result_frame, sigma_s, sigma_r, shade_factor);
+	}
+
+	return result_frame;
+}
+
 Mat frame_mode::colormap_effect_application_function(Mat desired_frame, enum ColormapTypes chosen_colormap)
 {
 	Mat result_frame, grayed_frame;
