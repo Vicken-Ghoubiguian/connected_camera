@@ -144,8 +144,8 @@ void usefull_functions::print_howto_in_konsole()
 	cout << terminal_color_codes::Yellow + "* Colormap bone mode - press '+' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Colormap autumn mode - press '-' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Colormap summer mode - press '*' \n" + terminal_color_codes::ResetAll;
-	cout << terminal_color_codes::Yellow + "* Colormap cool mode - press '.' \n" + terminal_color_codes::ResetAll;
-	cout << terminal_color_codes::Yellow + "* Colormap pink mode - press '\' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap cool mode - press ')' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Colormap pink mode - press '(' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* First pencil mode - press ':' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Second pencil mode - press ',' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Stylization mode - press '!' \n" + terminal_color_codes::ResetAll;
