@@ -1,4 +1,5 @@
 import src.terminal_color_codes as terminal_color_codes
+import subprocess
 from datetime import datetime
 
 def print_howto():
@@ -53,3 +54,11 @@ def writing_in_log_files_function(desired_log_file, desired_log_to_write):
 	log_file.write(desired_log_to_write)
 
 	log_file.close()
+
+def merging_audio_file_and_video_file_function(video_file, audio_file, output_file):
+
+	subprocess.run(["ffmpeg", "-i", video_file, "-i", audio_file, "-c", "copy", output_file])
+
+def deleting_buffer_video_function(buffer_video_file):
+
+	subprocess.run(["rm", "-r", buffer_video_file])
