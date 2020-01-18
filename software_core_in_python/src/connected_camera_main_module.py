@@ -137,14 +137,14 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				recording_sound_module.stop_recording_function(created_audio, created_stream, recording_frames, parameters_dict["channels"], parameters_dict["rate"], parameters_dict["format"])
 
 				usefull_functions_module.merging_audio_file_and_video_file_function(
-					'../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format,
-					'../repository_common_files/output_media_files/videos/outputSound.wav',
-					'../repository_common_files/output_media_files/videos/maVid' + output_video_format
+					'../repository_common_files/output_media_files/videos/output_video_file' + output_video_format,
+					'../repository_common_files/output_media_files/videos/output_audio_file.wav',
+					'../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format
 				)
 
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format)
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/output_video_file' + output_video_format)
 
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/outputSound.wav')
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/output_audio_file.wav')
 
 				output_video_file = None
 
@@ -166,7 +166,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			if is_shoting_video == False:
 
-				output_video_file = videoWriter_module.initialisation_of_videoWriter_function('../repository_common_files/output_media_files/videos/' + output_video_name, output_video_format)
+				output_video_file = videoWriter_module.initialisation_of_videoWriter_function('../repository_common_files/output_media_files/videos/output_video_file', output_video_format)
 
 				if output_video_file != None:
 
@@ -193,14 +193,14 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				recording_sound_module.stop_recording_function(created_audio, created_stream, recording_frames, parameters_dict["channels"], parameters_dict["rate"], parameters_dict["format"])
 
 				usefull_functions_module.merging_audio_file_and_video_file_function(
-                                        '../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format,
-                                        '../repository_common_files/output_media_files/videos/outputSound.wav',
-                                        '../repository_common_files/output_media_files/videos/maVid' + output_video_format
+                                        '../repository_common_files/output_media_files/videos/output_video_file' + output_video_format,
+                                        '../repository_common_files/output_media_files/videos/output_audio_file.wav',
+                                        '../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format
                                 )
 
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format)
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/output_video_file' + output_video_format)
 
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/outputSound.wav')
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/output_audio_file.wav')
 
 				output_video_file = None
 
