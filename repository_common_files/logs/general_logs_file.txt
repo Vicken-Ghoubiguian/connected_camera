@@ -332,3 +332,75 @@
 [janvier 18, 2020 at 01:21]: Beginning of video shooting
 [janvier 18, 2020 at 01:21]: End of video shooting
 -------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:19]: Activation of black and white with RGB application mode
+[janvier 18, 2020 at 09:19]: Photo shooted
+[janvier 18, 2020 at 09:20]: Photo shooted
+[janvier 18, 2020 at 09:20]: Beginning of video shooting
+[janvier 18, 2020 at 09:20]: Activation of ordinary mode
+[janvier 18, 2020 at 09:20]: End of video shooting
+[janvier 18, 2020 at 09:21]: Activation of black and white with RGB application mode
+[janvier 18, 2020 at 09:21]: Beginning of video shooting
+[janvier 18, 2020 at 09:21]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:22]: Activation of black and white with RGB application mode
+[janvier 18, 2020 at 09:22]: Activation of cartoonized mode
+[janvier 18, 2020 at 09:22]: Beginning of video shooting
+[janvier 18, 2020 at 09:22]: End of video shooting
+[janvier 18, 2020 at 09:22]: Beginning of video shooting
+[janvier 18, 2020 at 09:22]: Activation of ordinary mode
+[janvier 18, 2020 at 09:22]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:29]: Beginning of video shooting
+[janvier 18, 2020 at 09:29]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:43]: Beginning of video shooting
+[janvier 18, 2020 at 09:43]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:44]: Beginning of video shooting
+[janvier 18, 2020 at 09:44]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:45]: Beginning of video shooting
+[janvier 18, 2020 at 09:45]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:46]: Beginning of video shooting
+[janvier 18, 2020 at 09:46]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:47]: Beginning of video shooting
+[janvier 18, 2020 at 09:47]: End of video shooting
+[janvier 18, 2020 at 09:52]: Activation of edge detection mode
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:55]: Beginning of video shooting
+[janvier 18, 2020 at 09:55]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 09:56]: Beginning of video shooting
+[janvier 18, 2020 at 09:56]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 10:00]: Activation of black and white with RGB application mode
+[janvier 18, 2020 at 10:00]: Enable right ear detection
+[janvier 18, 2020 at 10:00]: Enable tree eye glasses detection
+[janvier 18, 2020 at 10:00]: Enable left ear detection
+[janvier 18, 2020 at 10:00]: Activation of ordinary mode
+[janvier 18, 2020 at 10:00]: Enable mouth detection
+[janvier 18, 2020 at 10:00]: Disable mouth detection
+[janvier 18, 2020 at 10:00]: Beginning of video shooting
+[janvier 18, 2020 at 10:00]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 10:01]: Beginning of video shooting
+[janvier 18, 2020 at 10:01]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 10:01]: Beginning of video shooting
+[janvier 18, 2020 at 10:01]: End of video shooting
+-------------------------------------

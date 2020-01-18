@@ -138,11 +138,13 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.merging_audio_file_and_video_file_function(
 					'../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format,
-					'../repository_common_files/sounds/16_seconds_old_video_projector_sound.mp3',
+					'../repository_common_files/output_media_files/videos/outputSound.wav',
 					'../repository_common_files/output_media_files/videos/maVid' + output_video_format
 				)
 
-				usefull_functions_module.deleting_buffer_video_function('../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format)
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format)
+
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/outputSound.wav')
 
 				output_video_file = None
 
@@ -192,11 +194,13 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				usefull_functions_module.merging_audio_file_and_video_file_function(
                                         '../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format,
-                                        '../repository_common_files/sounds/16_seconds_old_video_projector_sound.mp3',
+                                        '../repository_common_files/output_media_files/videos/outputSound.wav',
                                         '../repository_common_files/output_media_files/videos/maVid' + output_video_format
                                 )
 
-				usefull_functions_module.deleting_buffer_video_function('../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format)
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format)
+
+				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/outputSound.wav')
 
 				output_video_file = None
 
