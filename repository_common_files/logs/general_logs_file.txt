@@ -290,3 +290,45 @@
 -------------------------------------
 [janvier 18, 2020 at 12:39]: Enable facial detection
 -------------------------------------
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 01:07]: Beginning of video shooting
+-------------------------------------
+[janvier 18, 2020 at 01:08]: Beginning of video shooting
+[janvier 18, 2020 at 01:08]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 01:10]: Beginning of video shooting
+[janvier 18, 2020 at 01:10]: Activation of edge detection mode
+[janvier 18, 2020 at 01:11]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 01:12]: Activation of edge detection mode
+[janvier 18, 2020 at 01:12]: Beginning of video shooting
+[janvier 18, 2020 at 01:13]: End of video shooting
+[janvier 18, 2020 at 01:14]: Beginning of video shooting
+[janvier 18, 2020 at 01:15]: End of video shooting
+[janvier 18, 2020 at 01:16]: Activation of ordinary mode
+[janvier 18, 2020 at 01:16]: Beginning of video shooting
+[janvier 18, 2020 at 01:16]: End of video shooting
+[janvier 18, 2020 at 01:16]: Activation of edge detection mode
+[janvier 18, 2020 at 01:16]: Beginning of video shooting
+[janvier 18, 2020 at 01:16]: Activation of ordinary mode
+[janvier 18, 2020 at 01:16]: End of video shooting
+[janvier 18, 2020 at 01:17]: Enable facial detection
+[janvier 18, 2020 at 01:17]: Beginning of video shooting
+[janvier 18, 2020 at 01:17]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 01:18]: Beginning of video shooting
+[janvier 18, 2020 at 01:18]: Enable facial detection
+[janvier 18, 2020 at 01:18]: Enable eyes detection
+[janvier 18, 2020 at 01:19]: End of video shooting
+-------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 01:20]: Activation of edge detection mode
+[janvier 18, 2020 at 01:20]: Activation of ordinary mode
+[janvier 18, 2020 at 01:21]: Activation of hue saturation lightness mode
+[janvier 18, 2020 at 01:21]: Beginning of video shooting
+[janvier 18, 2020 at 01:21]: End of video shooting
+-------------------------------------

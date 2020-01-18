@@ -5,11 +5,11 @@ def start_recording_function(desired_format, desired_channels, desired_rate, des
 
 	created_audio = pyaudio.PyAudio()
 
-	created_stream = created_audio.open(format = desired_format, channels = desired_channels, rate = desired_rate, input = True, frame_per_buffer = desired_chunk)
+	created_stream = created_audio.open(format = desired_format, channels = desired_channels, rate = desired_rate, input = True, frames_per_buffer = desired_chunk)
 
 	recording_frames = []
 
-	parameters_dict = {"channels" : desired_channels, "rate" : desired_rate, "chunk" : desired_chunk}
+	parameters_dict = {"channels" : desired_channels, "rate" : desired_rate, "chunk" : desired_chunk, "format" : desired_format}
 
 	return created_audio, created_stream, recording_frames, parameters_dict
 
@@ -21,7 +21,7 @@ def recording_function(desired_stream, recording_frames, desired_chunk):
 
 	return recording_frames
 
-def stop_recording_function(desired_audio, desired_stream, desired_frames, desired_channels, desired_rate):
+def stop_recording_function(desired_audio, desired_stream, desired_frames, desired_channels, desired_rate, desired_format):
 
 	desired_stream.stop_stream()
 
@@ -33,7 +33,7 @@ def stop_recording_function(desired_audio, desired_stream, desired_frames, desir
 
 	waveFile.setnchannels(desired_channels)
 
-	waveFile.setsampwidth(desired_audio.get_sample_size(pyaudio.paInt16))
+	waveFile.setsampwidth(desired_audio.get_sample_size(desired_format))
 
 	waveFile.setframerate(desired_rate)
 

@@ -1,4 +1,5 @@
 import cv2
+import pyaudio
 import src.recording_sound_module as recording_sound_module
 import src.frame_mode_module as frame_mode_module
 import src.terminal_color_codes as terminal_color_codes
@@ -133,6 +134,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 				videoWriter_module.releasing_videoWriter_function(output_video_file)
 
+				recording_sound_module.stop_recording_function(created_audio, created_stream, recording_frames, parameters_dict["channels"], parameters_dict["rate"], parameters_dict["format"])
+
 				usefull_functions_module.merging_audio_file_and_video_file_function(
 					'../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format,
 					'../repository_common_files/sounds/16_seconds_old_video_projector_sound.mp3',
@@ -167,6 +170,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 					is_shoting_video = True
 
+					created_audio, created_stream, recording_frames, parameters_dict = recording_sound_module.start_recording_function(pyaudio.paInt16, 2, 44100, 1024)
+
 					usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.Yellow, "[" + today_as_string + "]: Beginning of video shooting")
 
 					usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Beginning of video shooting\n")
@@ -182,6 +187,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				is_shoting_video = False
 
 				videoWriter_module.releasing_videoWriter_function(output_video_file)
+
+				recording_sound_module.stop_recording_function(created_audio, created_stream, recording_frames, parameters_dict["channels"], parameters_dict["rate"], parameters_dict["format"])
 
 				usefull_functions_module.merging_audio_file_and_video_file_function(
                                         '../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format,
@@ -466,6 +473,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 		if is_shoting_video == True:
 
 			videoWriter_module.writing_frame_function(output_video_file, frame)
+
+			recording_frames = recording_sound_module.recording_function(created_stream, recording_frames, parameters_dict["chunk"])
 
 		cv2.imshow('Connected camera', frame)
 
