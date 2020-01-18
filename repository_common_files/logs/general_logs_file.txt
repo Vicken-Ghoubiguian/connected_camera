@@ -287,3 +287,6 @@
 [janvier 17, 2020 at 09:52]: Beginning of video shooting
 [janvier 17, 2020 at 09:52]: End of video shooting
 -------------------------------------
+-------------------------------------
+[janvier 18, 2020 at 12:39]: Enable facial detection
+-------------------------------------

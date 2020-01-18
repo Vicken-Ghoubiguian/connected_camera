@@ -1,4 +1,5 @@
 import cv2
+import src.recording_sound_module as recording_sound_module
 import src.frame_mode_module as frame_mode_module
 import src.terminal_color_codes as terminal_color_codes
 import src.detection_module as detection_module
