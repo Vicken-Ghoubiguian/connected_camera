@@ -29,7 +29,7 @@ def stop_recording_function(desired_audio, desired_stream, desired_frames, desir
 
 	desired_audio.terminate()
 
-	waveFile = wave.open("../repository_common_files/output_media_files/videos/output_audio_file.wav", 'wb')
+	waveFile = wave.open("../repository_common_files/output_media_files/videos/temporary_directory/output_audio_file.wav", 'wb')
 
 	waveFile.setnchannels(desired_channels)
 
