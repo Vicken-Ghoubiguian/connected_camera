@@ -64,6 +64,6 @@ def merging_audio_file_and_video_file_function(video_file, audio_file, output_fi
 
 	ffmpeg.concat(input_video_to_merge, input_audio_to_merge, v=1, a=1).output(output_file).run(overwrite_output=True)
 
-def deleting_buffer_file_function(buffer_video_file):
+def executing_linux_command_function(linux_command_table):
 
-	subprocess.run(["rm", "-r", buffer_video_file])
+	subprocess.run(linux_command_table)

@@ -142,9 +142,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 					'../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format
 				)
 
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/temporary_directory/output_video_file' + output_video_format)
-
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/temporary_directory/output_audio_file.wav')
+				usefull_functions_module.executing_linux_command_function(["rm", "-r", "../repository_common_files/output_media_files/videos/temporary_directory"])
 
 				output_video_file = None
 
@@ -165,6 +163,8 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 		elif c == ord('2'):
 
 			if is_shoting_video == False:
+
+				usefull_functions_module.executing_linux_command_function(["mkdir", "../repository_common_files/output_media_files/videos/temporary_directory"])
 
 				output_video_file = videoWriter_module.initialisation_of_videoWriter_function('../repository_common_files/output_media_files/videos/temporary_directory/output_video_file', output_video_format)
 
@@ -198,9 +198,7 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
                                         '../repository_common_files/output_media_files/videos/' + output_video_name + output_video_format
                                 )
 
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/temporary_directory/output_video_file' + output_video_format)
-
-				usefull_functions_module.deleting_buffer_file_function('../repository_common_files/output_media_files/videos/temporary_directory/output_audio_file.wav')
+				usefull_functions_module.executing_linux_command_function(["rm", "-r", "../repository_common_files/output_media_files/videos/temporary_directory"])
 
 				output_video_file = None
 
