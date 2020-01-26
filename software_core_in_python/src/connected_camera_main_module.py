@@ -214,6 +214,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			if is_current_mode != 't':
 
+				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.BackgroundMagenta, "[" + today_as_string + "]: Activation of oilPainting mode")
+
+				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: Activation of oilPainting mode\n")
+
 				is_current_mode = 't'
 
 		elif c == ord('p'):

@@ -16,6 +16,7 @@ def print_howto():
 		* Hue saturation lightness mode - press 'h'
 		* Gray and white mode - press 'w'
 		* Negative or inverted mode - press 'i'
+		* Oil painting mode - press '3'
 
 		Activate body parts detection:
 		* Activating face detection - press 'f'
