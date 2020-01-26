@@ -1,6 +1,12 @@
 import cv2
 import numpy as np
 
+def oilPainting_effect_function(desired_frame, whiched_size, whiched_dynRatio):
+
+	frame_with_oil_painting_effect = cv2.xphoto.oilPainting(desired_frame, whiched_size, whiched_dynRatio)
+
+	return frame_with_oil_painting_effect
+
 def colormap_effect_application_function(desired_frame, chosen_colormap):
 
 	grayed_frame = cv2.cvtColor(desired_frame, cv2.COLOR_BGR2GRAY)

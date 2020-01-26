@@ -84,6 +84,10 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 
 			frame = detection_module.right_ear_detection_application_function(frame)
 
+		if is_current_mode == 't':
+
+			frame = frame_mode_module.oilPainting_effect_function(frame, 10, 1)
+
 		if is_current_mode == 'i':
 
 			frame = frame_mode_module.negative_or_inverted_effect_function(frame)
@@ -205,6 +209,12 @@ def exploits_function(output_video_name, output_video_format, output_photo_name,
 				usefull_functions_module.writing_in_console_function(terminal_color_codes.terminal_color_codes.Yellow, "[" + today_as_string + "]: End of video shooting")
 
 				usefull_functions_module.writing_in_log_files_function('../repository_common_files/logs/general_logs_file.txt', "[" + today_as_string + "]: End of video shooting\n")
+
+		elif c == ord('3'):
+
+			if is_current_mode != 't':
+
+				is_current_mode = 't'
 
 		elif c == ord('p'):
 
