@@ -1,5 +1,25 @@
 #include "frame_mode_library.hpp"
 
+Mat frame_mode::pencil_sketch_effect_function(Mat desired_frame, int selected_result, float s_sigma, float r_sigma, float shade_factor)
+{
+	Mat grayed_result_frame, colored_result_frame;
+
+	pencilSketch(desired_frame, grayed_result_frame, colored_result_frame, s_sigma, r_sigma, shade_factor);
+
+	if(selected_result == 0)
+	{
+
+		return grayed_result_frame;
+
+	}
+	else
+	{
+
+		return colored_result_frame;
+
+	}
+}
+
 Mat frame_mode::stylization_effect_application_function(Mat desired_frame, float sigma_s, float sigma_r)
 {
 	Mat result_frame;

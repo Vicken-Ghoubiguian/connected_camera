@@ -13,6 +13,7 @@ using namespace cv;
 
 namespace frame_mode
 {
+	Mat pencil_sketch_effect_function(Mat desired_frame, int selected_result, float s_sigma, float r_sigma, float shade_factor);
 	Mat negative_or_inverted_effect_function(Mat desired_frame);
 	Mat edge_detection_mode_function(Mat desired_frame);
 	Mat hue_saturation_lightness_effect_function(Mat desired_frame);
