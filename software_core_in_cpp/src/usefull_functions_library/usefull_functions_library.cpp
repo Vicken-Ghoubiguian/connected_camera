@@ -97,6 +97,8 @@ std::string usefull_functions::print_howto_in_window()
 	print_howto_string = print_howto_string + "* First pencil mode - press ':' \n";
 	print_howto_string = print_howto_string + "* Second pencil mode - press ',' \n";
 	print_howto_string = print_howto_string + "* Stylization mode - press '!' \n";
+	cout << terminal_color_codes::Yellow + "* Improved detail mode - press '<' \n";
+        cout << terminal_color_codes::Yellow + "* Edge preservation mode - press '&' \n";
 	print_howto_string = print_howto_string + "\n";
 	print_howto_string = print_howto_string + "Activate body parts detection: \n";
 	print_howto_string = print_howto_string + "* Activating face detection - press 'f' \n";
@@ -149,6 +151,8 @@ void usefull_functions::print_howto_in_konsole()
 	cout << terminal_color_codes::Yellow + "* First pencil mode - press ':' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Second pencil mode - press ',' \n" + terminal_color_codes::ResetAll;
 	cout << terminal_color_codes::Yellow + "* Stylization mode - press '!' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Improved detail mode - press '<' \n" + terminal_color_codes::ResetAll;
+	cout << terminal_color_codes::Yellow + "* Edge preservation mode - press '&' \n" + terminal_color_codes::ResetAll;
         cout << "\n";
         cout << terminal_color_codes::Yellow + "Activate body parts detection: \n" + terminal_color_codes::ResetAll;
         cout << terminal_color_codes::Yellow + "* Activating face detection - press 'f' \n" + terminal_color_codes::ResetAll;
