@@ -13,6 +13,7 @@ using namespace cv;
 
 namespace frame_mode
 {
+	Mat edges_preservation_effect_function(Mat desired_frame, int whished_flag, float s_sigma, float r_sigma);
 	Mat improved_detail_effect_function(Mat desired_frame, float s_sigma, float r_sigma);
 	Mat negative_or_inverted_effect_function(Mat desired_frame);
 	Mat edge_detection_mode_function(Mat desired_frame);

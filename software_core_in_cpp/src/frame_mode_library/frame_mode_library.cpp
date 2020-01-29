@@ -1,5 +1,14 @@
 #include "frame_mode_library.hpp"
 
+Mat frame_mode::edges_preservation_effect_function(Mat desired_frame, int whished_flag, float s_sigma, float r_sigma)
+{
+	Mat result_frame;
+
+	edgePreservingFilter(desired_frame, result_frame, whished_flag, s_sigma, r_sigma);
+
+	return result_frame;
+}
+
 Mat frame_mode::improved_detail_effect_function(Mat desired_frame, float s_sigma, float r_sigma)
 {
 	Mat result_frame;
