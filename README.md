@@ -1,4 +1,10 @@
+# Connected camera
+
 This is a connected camera project.
+
+##### Table of contents
+
+## Features
 
 This connected camera has the following features:
 
@@ -21,6 +27,8 @@ To use the cpp software core in the current project or to test it, follow this c
 1. `cd connected_camera/software_core_in_cpp`
 
 1. `g++ -o main main.cpp src/*/* graphic_interface/*/* `pkg-config --cflags --libs gtkmm-3.0 opencv``
+
+## Ressources and instructions
 
 To add a new icon for the software core, add your image in the .png format in the repository_common_files/images/connected_camera_icons directory.
 
